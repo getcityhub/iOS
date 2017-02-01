@@ -51,4 +51,8 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+## CocoaPods
+Pods/
+*.xcworkspace
+
 # End of https://www.gitignore.io/api/macos,xcode
