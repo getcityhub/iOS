@@ -15,7 +15,6 @@
 		EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */; };
 		EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8469811E3FC32E00A97F8D /* PostCard.swift */; };
 		EB8469841E3FC47F00A97F8D /* PostCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8469831E3FC47F00A97F8D /* PostCard.xib */; };
-		EB8469861E3FC4F700A97F8D /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8469851E3FC4F700A97F8D /* CardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePostsViewController.swift; sourceTree = "<group>"; };
 		EB8469811E3FC32E00A97F8D /* PostCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
 		EB8469831E3FC47F00A97F8D /* PostCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCard.xib; sourceTree = "<group>"; };
-		EB8469851E3FC4F700A97F8D /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
 				EB8469811E3FC32E00A97F8D /* PostCard.swift */,
 				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
-				EB8469851E3FC4F700A97F8D /* CardCell.swift */,
 				EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */,
 				EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */,
 				EB781E191E3FB91C00B7F0A4 /* Info.plist */,
@@ -132,6 +129,7 @@
 				TargetAttributes = {
 					EB781E091E3FB91C00B7F0A4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 59PUM5CV3T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -224,7 +222,6 @@
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,
-				EB8469861E3FC4F700A97F8D /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +335,9 @@
 			baseConfigurationReference = 32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59PUM5CV3T;
 				INFOPLIST_FILE = CityHub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.getcityhub.CityHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +350,9 @@
 			baseConfigurationReference = 9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59PUM5CV3T;
 				INFOPLIST_FILE = CityHub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.getcityhub.CityHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";

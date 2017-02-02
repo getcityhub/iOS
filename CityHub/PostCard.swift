@@ -8,34 +8,36 @@
 
 import UIKit
 
-class PostCard: UIView {
+class PostCard: UITableViewCell {
     
     // MARK: Properties
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var cardBackground: UIView!
+    @IBOutlet weak var moreButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     // MARK: View Life Cycle
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
-        textView.backgroundColor = .clear
+        cardBackground.layer.cornerRadius = 2
         
-        layer.cornerRadius = 2
-        
-        let shadowPath = UIBezierPath(rect: bounds)
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 2)
-        layer.shadowOpacity = 0.35
-        layer.shadowRadius = 2
-        layer.shadowPath = shadowPath.cgPath
+        let shadowPath = UIBezierPath(rect: cardBackground.bounds)
+        cardBackground.layer.masksToBounds = false
+        cardBackground.layer.shadowColor = UIColor.black.cgColor
+        cardBackground.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cardBackground.layer.shadowOpacity = 0.35
+        cardBackground.layer.shadowRadius = 2
+        cardBackground.layer.shadowPath = shadowPath.cgPath
     }
     
     // MARK: Public Methods
     
     func configure(text: String) {
-        textView.text = text
+        contentLabel.text = text
     }
 }

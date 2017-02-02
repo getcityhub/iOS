@@ -9,7 +9,7 @@
 import Material
 import UIKit
 
-class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BrowsePostsViewController: UIViewController, UITableViewDataSource {
     
     // MARK: Properties
     
@@ -35,7 +35,8 @@ class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITabl
             postsTableView = UITableView()
             postsTableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
             postsTableView.dataSource = self
-            postsTableView.delegate = self
+            postsTableView.estimatedRowHeight = 139
+            postsTableView.rowHeight = UITableViewAutomaticDimension
             postsTableView.separatorStyle = .none
             view.addSubview(postsTableView)
         }
@@ -50,15 +51,8 @@ class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let card = Bundle.main.loadNibNamed("PostCard", owner: self, options: nil)![0] as! PostCard
-        card.configure(text: "This is my post")
+        card.configure(text: "Lorem ipsum dolor sit amet, everti equidem sed cu, diceret scripserit ei sed. Ius ridens epicuri ne, ex nobis invenire inimicus quo, aeque dictas his ex.")
         
-        let cell = CardCell(card: card)
-        return cell
-    }
-    
-    // MARK: UITableViewDelegate Methods
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 128
+        return card
     }
 }
