@@ -33,6 +33,7 @@ class BrowsePostsViewController: UIViewController, UITableViewDataSource {
         
         if postsTableView == nil {
             postsTableView = UITableView()
+            postsTableView.allowsSelection = false
             postsTableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
             postsTableView.dataSource = self
             postsTableView.estimatedRowHeight = 139
