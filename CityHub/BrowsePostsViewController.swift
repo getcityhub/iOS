@@ -6,41 +6,40 @@
 //  Copyright © 2017 CityHub. All rights reserved.
 //
 
+import Material
 import UIKit
 
 class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     
-    @IBOutlet weak var statusBarBackground: UIView!
-    @IBOutlet weak var menuBar: UIView!
-    @IBOutlet weak var postsTableView: UITableView!
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    private var postsTableView: UITableView!
     
     // MARK: View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        postsTableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-        postsTableView.dataSource = self
-        postsTableView.delegate = self
+        if let toolbar = toolbarController?.toolbar {
+            toolbar.contentEdgeInsets = EdgeInsets(top: 0, left: 24, bottom: 0, right: 12)
+            toolbar.title = "Posts"
+            toolbar.titleLabel.textColor = .white
+            toolbar.titleLabel.textAlignment = .left
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let menuBarShadowPath = UIBezierPath(rect: menuBar.bounds)
-        menuBar.layer.cornerRadius = 0
-        menuBar.layer.masksToBounds = false
-        menuBar.layer.shadowColor = UIColor.black.cgColor
-        menuBar.layer.shadowOffset = CGSize(width: 0, height: 2)
-        menuBar.layer.shadowOpacity = 0.5
-        menuBar.layer.shadowRadius = 2
-        menuBar.layer.shadowPath = menuBarShadowPath.cgPath
+        if postsTableView == nil {
+            postsTableView = UITableView()
+            postsTableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+            postsTableView.dataSource = self
+            postsTableView.delegate = self
+            postsTableView.separatorStyle = .none
+            view.addSubview(postsTableView)
+        }
+        postsTableView.frame = view.bounds
     }
     
     // MARK: UITableViewDataSource Methods

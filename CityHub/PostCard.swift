@@ -20,7 +20,7 @@ class PostCard: UIView {
         super.layoutSubviews()
         
         backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
-        textView.backgroundColor = UIColor.clear
+        textView.backgroundColor = .clear
         
         layer.cornerRadius = 2
         
