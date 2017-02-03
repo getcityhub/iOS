@@ -9,10 +9,11 @@
 import Material
 import UIKit
 
-class BrowsePostsViewController: UIViewController, UITableViewDataSource {
+class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     
+    private var postCells = [IndexPath: UITableViewCell]()
     private var postsTableView: UITableView!
     
     // MARK: View Life Cycle
@@ -36,10 +37,14 @@ class BrowsePostsViewController: UIViewController, UITableViewDataSource {
             postsTableView.allowsSelection = false
             postsTableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
             postsTableView.dataSource = self
+            postsTableView.delegate = self
             postsTableView.estimatedRowHeight = 139
             postsTableView.rowHeight = UITableViewAutomaticDimension
             postsTableView.separatorStyle = .none
             view.addSubview(postsTableView)
+            
+            let nib = UINib(nibName: "PostCard", bundle: nil)
+            postsTableView.register(nib, forCellReuseIdentifier: "PostCardCell")
         }
         postsTableView.frame = view.bounds
     }
@@ -51,9 +56,14 @@ class BrowsePostsViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let card = Bundle.main.loadNibNamed("PostCard", owner: self, options: nil)![0] as! PostCard
-        card.configure(text: "Lorem ipsum dolor sit amet, everti equidem sed cu, diceret scripserit ei sed. Ius ridens epicuri ne, ex nobis invenire inimicus quo, aeque dictas his ex.")
-        
-        return card
+        if let cell = postCells[indexPath] {
+            return cell
+        } else {
+            let cell = Bundle.main.loadNibNamed("PostCard", owner: self, options: nil)![0] as! PostCard
+            cell.configure(text: "Lorem ipsum dolor sit amet, everti equidem sed cu, diceret scripserit ei sed. Ius ridens epicuri ne, ex nobis invenire inimicus quo, aeque dictas his ex.")
+            
+            postCells[indexPath] = cell
+            return cell
+        }
     }
 }
