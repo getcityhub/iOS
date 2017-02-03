@@ -15,6 +15,8 @@
 		EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */; };
 		EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8469811E3FC32E00A97F8D /* PostCard.swift */; };
 		EB8469841E3FC47F00A97F8D /* PostCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8469831E3FC47F00A97F8D /* PostCard.xib */; };
+		EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB95064C1E443A5300F8A745 /* CityHubRequest.swift */; };
+		EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */; };
 		EBDE7BF21E439F34007057C8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE7BF11E439F34007057C8 /* Post.swift */; };
 		EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,8 @@
 		EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePostsViewController.swift; sourceTree = "<group>"; };
 		EB8469811E3FC32E00A97F8D /* PostCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
 		EB8469831E3FC47F00A97F8D /* PostCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCard.xib; sourceTree = "<group>"; };
+		EB95064C1E443A5300F8A745 /* CityHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubRequest.swift; sourceTree = "<group>"; };
+		EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubRequestError.swift; sourceTree = "<group>"; };
 		EBDE7BF11E439F34007057C8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,8 @@
 				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
 				EBDE7BF11E439F34007057C8 /* Post.swift */,
 				EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */,
+				EB95064C1E443A5300F8A745 /* CityHubRequest.swift */,
+				EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */,
 				EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */,
 				EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */,
 				EB781E191E3FB91C00B7F0A4 /* Info.plist */,
@@ -227,9 +233,11 @@
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
+				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,
 				EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,
 				EBDE7BF21E439F34007057C8 /* Post.swift in Sources */,
+				EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
