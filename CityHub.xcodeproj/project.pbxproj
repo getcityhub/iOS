@@ -90,20 +90,68 @@
 		EB781E0C1E3FB91C00B7F0A4 /* CityHub */ = {
 			isa = PBXGroup;
 			children = (
-				EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */,
-				EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */,
-				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
-				EB8469811E3FC32E00A97F8D /* PostCard.swift */,
-				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
-				EBDE7BF11E439F34007057C8 /* Post.swift */,
-				EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */,
-				EB95064C1E443A5300F8A745 /* CityHubRequest.swift */,
-				EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */,
+				EB8E66551E45706A0069C8EC /* Utilities */,
+				EB8E66561E4570740069C8EC /* Views */,
+				EB8E66571E4570A00069C8EC /* View Controller */,
+				EB8E66581E45731D0069C8EC /* API */,
 				EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */,
 				EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */,
 				EB781E191E3FB91C00B7F0A4 /* Info.plist */,
 			);
 			path = CityHub;
+			sourceTree = "<group>";
+		};
+		EB8E66551E45706A0069C8EC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */,
+				EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		EB8E66561E4570740069C8EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB8469811E3FC32E00A97F8D /* PostCard.swift */,
+				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EB8E66571E4570A00069C8EC /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */,
+				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		EB8E66581E45731D0069C8EC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E66591E4575DC0069C8EC /* Models */,
+				EB8E665A1E4575E20069C8EC /* Request */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		EB8E66591E4575DC0069C8EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE7BF11E439F34007057C8 /* Post.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EB8E665A1E4575E20069C8EC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EB95064C1E443A5300F8A745 /* CityHubRequest.swift */,
+				EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */,
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,7 +1,7 @@
 PODS:
-  - Material (2.4.11):
-    - Material/Core (= 2.4.11)
-  - Material/Core (2.4.11)
+  - Material (2.4.12):
+    - Material/Core (= 2.4.12)
+  - Material/Core (2.4.12)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
-  Material: 09b50565d8f824bd74881eba12d7c549b41f510d
+  Material: e9e6f09e2057309a52b9700f056be55b69d90af7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
 PODFILE CHECKSUM: 21329662ef941b4298a12bb59f111dadf42b31bb
