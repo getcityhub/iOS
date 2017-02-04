@@ -21,17 +21,13 @@ class CityHubToolbarController: ToolbarController {
     override func prepare() {
         super.prepare()
         
-        emptyButton = IconButton(image: nil, tintColor: .white)
-        emptyButton.pulseColor = .clear
-        
-        searchButton = IconButton(image: Icon.cm.search, tintColor: .white)
+        searchButton = IconButton(image: #imageLiteral(resourceName: "Search").withRenderingMode(.alwaysTemplate), tintColor: .white)
         searchButton.pulseColor = .white
         
         statusBarStyle = .lightContent
         statusBar.backgroundColor = Color.blue.darken3
         
         toolbar.backgroundColor = Color.blue.darken2
-        toolbar.leftViews = []
         toolbar.rightViews = [searchButton]
     }
 }
