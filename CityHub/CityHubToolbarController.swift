@@ -11,7 +11,6 @@ import UIKit
 
 class CityHubToolbarController: ToolbarController {
     
-    private var emptyButton: IconButton!
     private var searchButton: IconButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

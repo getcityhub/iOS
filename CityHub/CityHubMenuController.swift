@@ -31,6 +31,7 @@ class CityHubMenuController: MenuController, MenuDelegate {
         addButton.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
         
         let postButton = MenuItem()
+        postButton.button.addTarget(self, action: #selector(postButtonPressed), for: .touchUpInside)
         postButton.button.image = #imageLiteral(resourceName: "Edit").withRenderingMode(.alwaysTemplate)
         postButton.button.tintColor = .white
         postButton.button.pulseColor = .white
@@ -56,6 +57,16 @@ class CityHubMenuController: MenuController, MenuDelegate {
         } else {
             openMenu { view in
                 (view as? MenuItem)?.showTitleLabel()
+            }
+        }
+    }
+    
+    @objc private func postButtonPressed(sender: FabButton) {
+        let pvc = CreatePostToolbarController(rootViewController: CreatePostViewController())
+        
+        present(pvc, animated: true) {
+            self.closeMenu { view in
+                (view as? MenuItem)?.hideTitleLabel()
             }
         }
     }

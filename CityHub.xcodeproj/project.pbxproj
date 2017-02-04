@@ -19,6 +19,10 @@
 		EB8E665E1E457E160069C8EC /* CityHubMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E665D1E457E160069C8EC /* CityHubMenuController.swift */; };
 		EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB95064C1E443A5300F8A745 /* CityHubRequest.swift */; };
 		EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */; };
+		EBCF2D541E464BC700DCB577 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D531E464BC700DCB577 /* CreatePostViewController.swift */; };
+		EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */; };
+		EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */; };
+		EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */; };
 		EBDE7BF21E439F34007057C8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE7BF11E439F34007057C8 /* Post.swift */; };
 		EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +43,10 @@
 		EB8E665D1E457E160069C8EC /* CityHubMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubMenuController.swift; sourceTree = "<group>"; };
 		EB95064C1E443A5300F8A745 /* CityHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubRequest.swift; sourceTree = "<group>"; };
 		EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubRequestError.swift; sourceTree = "<group>"; };
+		EBCF2D531E464BC700DCB577 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostToolbarController.swift; sourceTree = "<group>"; };
+		EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTopicViewController.swift; sourceTree = "<group>"; };
+		EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTopicHeader.swift; sourceTree = "<group>"; };
 		EBDE7BF11E439F34007057C8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +127,7 @@
 			children = (
 				EB8469811E3FC32E00A97F8D /* PostCard.swift */,
 				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
+				EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -126,9 +135,11 @@
 		EB8E66571E4570A00069C8EC /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EBCF2D551E464BCB00DCB577 /* Material */,
 				EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */,
-				EB8E665D1E457E160069C8EC /* CityHubMenuController.swift */,
-				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
+				EBCF2D531E464BC700DCB577 /* CreatePostViewController.swift */,
+				EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */,
+				EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -158,6 +169,15 @@
 				EB95064E1E443AD400F8A745 /* CityHubRequestError.swift */,
 			);
 			name = Request;
+			sourceTree = "<group>";
+		};
+		EBCF2D551E464BCB00DCB577 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E665D1E457E160069C8EC /* CityHubMenuController.swift */,
+				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
+			);
+			name = Material;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +307,14 @@
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
+				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
 				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,
 				EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */,
 				EB8E665E1E457E160069C8EC /* CityHubMenuController.swift in Sources */,
+				EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */,
 				EB8E665C1E4576090069C8EC /* User.swift in Sources */,
+				EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */,
+				EBCF2D541E464BC700DCB577 /* CreatePostViewController.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,
 				EBDE7BF21E439F34007057C8 /* Post.swift in Sources */,
 				EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */,
