@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
 		EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */; };
+		EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */; };
+		EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB73A2621E47B4680079CA13 /* PoliticianCard.xib */; };
 		EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */; };
 		EB781E151E3FB91C00B7F0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */; };
 		EB781E181E3FB91C00B7F0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */; };
@@ -33,6 +35,8 @@
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.release.xcconfig"; sourceTree = "<group>"; };
 		EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubToolbarController.swift; sourceTree = "<group>"; };
+		EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianCard.swift; sourceTree = "<group>"; };
+		EB73A2621E47B4680079CA13 /* PoliticianCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoliticianCard.xib; sourceTree = "<group>"; };
 		EB781E0A1E3FB91C00B7F0A4 /* CityHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
 				EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */,
 				EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */,
+				EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */,
+				EB73A2621E47B4680079CA13 /* PoliticianCard.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB781E181E3FB91C00B7F0A4 /* LaunchScreen.storyboard in Resources */,
+				EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */,
 				EB8469841E3FC47F00A97F8D /* PostCard.xib in Resources */,
 				EB781E151E3FB91C00B7F0A4 /* Assets.xcassets in Resources */,
 			);
@@ -312,6 +319,7 @@
 			files = (
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
+				EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
 				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,
