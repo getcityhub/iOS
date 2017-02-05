@@ -23,6 +23,8 @@
 		EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */; };
 		EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */; };
 		EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */; };
+		EBCF2D5D1E46B88800DCB577 /* PostCreationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */; };
+		EBCF2D5F1E46C04F00DCB577 /* SelectTopicToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */; };
 		EBDE7BF21E439F34007057C8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE7BF11E439F34007057C8 /* Post.swift */; };
 		EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostToolbarController.swift; sourceTree = "<group>"; };
 		EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTopicViewController.swift; sourceTree = "<group>"; };
 		EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTopicHeader.swift; sourceTree = "<group>"; };
+		EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCreationToolbar.swift; sourceTree = "<group>"; };
+		EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTopicToolbarController.swift; sourceTree = "<group>"; };
 		EBDE7BF11E439F34007057C8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 				EB8469811E3FC32E00A97F8D /* PostCard.swift */,
 				EB8469831E3FC47F00A97F8D /* PostCard.xib */,
 				EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */,
+				EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -138,8 +143,9 @@
 				EBCF2D551E464BCB00DCB577 /* Material */,
 				EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */,
 				EBCF2D531E464BC700DCB577 /* CreatePostViewController.swift */,
-				EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */,
 				EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */,
+				EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */,
+				EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -317,7 +323,9 @@
 				EBCF2D541E464BC700DCB577 /* CreatePostViewController.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,
 				EBDE7BF21E439F34007057C8 /* Post.swift in Sources */,
+				EBCF2D5D1E46B88800DCB577 /* PostCreationToolbar.swift in Sources */,
 				EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */,
+				EBCF2D5F1E46C04F00DCB577 /* SelectTopicToolbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

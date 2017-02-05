@@ -10,8 +10,20 @@ import UIKit
 
 class SelectTopicViewController: UITableViewController, CollapsibleTopicHeaderDelegate {
     
+    private var completionBlock: ((_ topic: String?) -> Void)?
     private var sections = [TopicSection]()
+    
     private var selectedIndexPath: IndexPath?
+    private var selectedTopic: String?
+    
+    init(completion: ((_ topic: String?) -> Void)?) {
+        super.init(style: .plain)
+        completionBlock = completion
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +38,10 @@ class SelectTopicViewController: UITableViewController, CollapsibleTopicHeaderDe
             TopicSection(name: "Streets & Sidewalks", items: ["Street Pothole", "Highway Surface", "Blocked Sidewalk/St", "Damaged Sidewalk", "Damaged Curb", "Street Sign", "Traffic Signal", "Street Light", "Illegal Poster", "Damaged Tree", "Dirty Sidewalk", "Catch Basin", "Fire Hydrant", "Water Leak", "Other"], collapsed: true),
             TopicSection(name: "Public Health/Safety", items: ["Garbage Collection", "Garbage Storage", "Dirty Sidewalk", "Damaged Tree", "Rodents", "Dog or Animal Waste", "Animal Abuse", "Food Safety", "Food Poisoning", "Homeless Person", "Other"], collapsed: true)
         ]
+    }
+    
+    func dismiss() {
+        completionBlock?(selectedTopic)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,6 +100,8 @@ class SelectTopicViewController: UITableViewController, CollapsibleTopicHeaderDe
         }
         
         selectedIndexPath = indexPath
+        selectedTopic = sections[indexPath.section].items[indexPath.row]
+        
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
 }
