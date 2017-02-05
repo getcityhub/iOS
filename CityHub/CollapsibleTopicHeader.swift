@@ -27,16 +27,14 @@ class CollapsibleTopicHeader: UITableViewHeaderFooterView {
         super.init(reuseIdentifier: reuseIdentifier)
         
         arrowLabel = UILabel()
-        titleLabel = UILabel()
-        
         arrowLabel.widthAnchor.constraint(equalToConstant: 12).isActive = true
-        arrowLabel.heightAnchor.constraint(equalToConstant: 12).isActive = true
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         arrowLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        contentView.addSubview(titleLabel)
         contentView.addSubview(arrowLabel)
+        
+        titleLabel = UILabel()
+        titleLabel.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(titleLabel)
         
         let tgr = UITapGestureRecognizer(target: self, action: #selector(tapHeader))
         addGestureRecognizer(tgr)
@@ -51,7 +49,7 @@ class CollapsibleTopicHeader: UITableViewHeaderFooterView {
         
         contentView.backgroundColor = .white
         
-        let views = [
+        let views: [String: UIView] = [
             "titleLabel": titleLabel,
             "arrowLabel": arrowLabel
         ]
