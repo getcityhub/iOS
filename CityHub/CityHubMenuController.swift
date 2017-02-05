@@ -40,6 +40,7 @@ class CityHubMenuController: MenuController, MenuDelegate {
         postButton.title = "Write a post"
         
         let contactButton = MenuItem()
+        contactButton.button.addTarget(self, action: #selector(contactButtonPressed), for: .touchUpInside)
         contactButton.button.image = #imageLiteral(resourceName: "Email").withRenderingMode(.alwaysTemplate)
         contactButton.button.tintColor = .white
         contactButton.button.pulseColor = .white
@@ -64,6 +65,16 @@ class CityHubMenuController: MenuController, MenuDelegate {
     
     @objc private func postButtonPressed(sender: FabButton) {
         let pvc = CreatePostToolbarController(rootViewController: CreatePostViewController())
+        
+        present(pvc, animated: true) {
+            self.closeMenu { view in
+                (view as? MenuItem)?.hideTitleLabel()
+            }
+        }
+    }
+    
+    @objc private func contactButtonPressed(sender: FabButton) {
+        let pvc = BrowsePoliticiansToolbarController(rootViewController: BrowsePoliticiansViewController())
         
         present(pvc, animated: true) {
             self.closeMenu { view in

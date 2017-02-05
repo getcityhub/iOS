@@ -9,12 +9,11 @@
 import Material
 import UIKit
 
-class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BrowsePostsViewController: UITableViewController {
     
     // MARK: Properties
     
     private var postCells = [IndexPath: UITableViewCell]()
-    private var postsTableView: UITableView!
     
     // MARK: View Life Cycle
     
@@ -27,35 +26,21 @@ class BrowsePostsViewController: UIViewController, UITableViewDataSource, UITabl
             toolbar.titleLabel.textColor = .white
             toolbar.titleLabel.textAlignment = .left
         }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
-        if postsTableView == nil {
-            postsTableView = UITableView()
-            postsTableView.allowsSelection = false
-            postsTableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-            postsTableView.dataSource = self
-            postsTableView.delegate = self
-            postsTableView.estimatedRowHeight = 139
-            postsTableView.rowHeight = UITableViewAutomaticDimension
-            postsTableView.separatorStyle = .none
-            view.addSubview(postsTableView)
-            
-            let nib = UINib(nibName: "PostCard", bundle: nil)
-            postsTableView.register(nib, forCellReuseIdentifier: "PostCardCell")
-        }
-        postsTableView.frame = view.bounds
+        tableView.allowsSelection = false
+        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        tableView.estimatedRowHeight = 139
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
     }
     
     // MARK: UITableViewDataSource Methods
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = postCells[indexPath] {
             return cell
         } else {

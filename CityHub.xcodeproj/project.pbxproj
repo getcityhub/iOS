@@ -11,6 +11,8 @@
 		EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */; };
 		EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */; };
 		EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB73A2621E47B4680079CA13 /* PoliticianCard.xib */; };
+		EB73A2651E47C2090079CA13 /* BrowsePoliticiansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2641E47C2090079CA13 /* BrowsePoliticiansViewController.swift */; };
+		EB73A2671E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2661E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift */; };
 		EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */; };
 		EB781E151E3FB91C00B7F0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */; };
 		EB781E181E3FB91C00B7F0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 		EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubToolbarController.swift; sourceTree = "<group>"; };
 		EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianCard.swift; sourceTree = "<group>"; };
 		EB73A2621E47B4680079CA13 /* PoliticianCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoliticianCard.xib; sourceTree = "<group>"; };
+		EB73A2641E47C2090079CA13 /* BrowsePoliticiansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePoliticiansViewController.swift; sourceTree = "<group>"; };
+		EB73A2661E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsePoliticiansToolbarController.swift; sourceTree = "<group>"; };
 		EB781E0A1E3FB91C00B7F0A4 /* CityHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,10 +152,9 @@
 			children = (
 				EBCF2D551E464BCB00DCB577 /* Material */,
 				EB84697F1E3FBD3200A97F8D /* BrowsePostsViewController.swift */,
+				EB73A2641E47C2090079CA13 /* BrowsePoliticiansViewController.swift */,
 				EBCF2D531E464BC700DCB577 /* CreatePostViewController.swift */,
-				EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */,
 				EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */,
-				EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -186,8 +189,11 @@
 		EBCF2D551E464BCB00DCB577 /* Material */ = {
 			isa = PBXGroup;
 			children = (
+				EBCF2D561E464C0100DCB577 /* CreatePostToolbarController.swift */,
 				EB8E665D1E457E160069C8EC /* CityHubMenuController.swift */,
 				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
+				EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */,
+				EB73A2661E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift */,
 			);
 			name = Material;
 			sourceTree = "<group>";
@@ -327,12 +333,14 @@
 				EB8E665E1E457E160069C8EC /* CityHubMenuController.swift in Sources */,
 				EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */,
 				EB8E665C1E4576090069C8EC /* User.swift in Sources */,
+				EB73A2671E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift in Sources */,
 				EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */,
 				EBCF2D541E464BC700DCB577 /* CreatePostViewController.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,
 				EBDE7BF21E439F34007057C8 /* Post.swift in Sources */,
 				EBCF2D5D1E46B88800DCB577 /* PostCreationToolbar.swift in Sources */,
 				EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */,
+				EB73A2651E47C2090079CA13 /* BrowsePoliticiansViewController.swift in Sources */,
 				EBCF2D5F1E46C04F00DCB577 /* SelectTopicToolbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
