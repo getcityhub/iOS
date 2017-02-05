@@ -1,17 +1,22 @@
 PODS:
-  - Material (2.4.12):
-    - Material/Core (= 2.4.12)
-  - Material/Core (2.4.12)
+  - Material (2.4.13):
+    - Material/Core (= 2.4.13)
+  - Material/Core (2.4.13)
+  - Motion (1.0.1):
+    - Motion/Core (= 1.0.1)
+  - Motion/Core (1.0.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Material (~> 2.4)
+  - Motion (~> 1.0)
   - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
-  Material: e9e6f09e2057309a52b9700f056be55b69d90af7
+  Material: a056f69c8f9c65ace26bb5ef9cb0823d49b787d9
+  Motion: a2356231ac6a1ca5914a618dabda50267946b060
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 21329662ef941b4298a12bb59f111dadf42b31bb
+PODFILE CHECKSUM: 3a0d85414fab9b7a8d07b4e33e7d8cdd17b1a5e5
 
 COCOAPODS: 1.2.0

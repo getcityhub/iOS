@@ -7,6 +7,7 @@
 //
 
 import Material
+import Motion
 import UIKit
 
 class CityHubMenuController: MenuController, MenuDelegate {
@@ -73,12 +74,12 @@ class CityHubMenuController: MenuController, MenuDelegate {
     
     override func openMenu(completion: ((UIView) -> Void)?) {
         super.openMenu(completion: completion)
-        menu.views.first?.animate(animation: Motion.rotate(angle: 45))
+        menu.views.first?.motion(.rotationAngle(45))
     }
     
     override func closeMenu(completion: ((UIView) -> Void)?) {
         super.closeMenu(completion: completion)
-        menu.views.first?.animate(animation: Motion.rotate(angle: 0))
+        menu.views.first?.motion(.rotationAngle(0))
     }
     
     func menu(menu: Menu, tappedAt point: CGPoint, isOutside: Bool) {

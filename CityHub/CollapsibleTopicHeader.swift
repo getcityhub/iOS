@@ -7,6 +7,7 @@
 //
 
 import Material
+import Motion
 import UIKit
 
 class CollapsibleTopicHeader: UITableViewHeaderFooterView {
@@ -16,7 +17,7 @@ class CollapsibleTopicHeader: UITableViewHeaderFooterView {
     
     var isCollapsed = true {
         didSet {
-            arrowLabel.animate(animation: Motion.rotate(angle: isCollapsed ? 0 : 90))
+            arrowLabel.motion(.rotationAngle(isCollapsed ? 0 : 90))
         }
     }
     
