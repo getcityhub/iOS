@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8H-1G-NKv">
                     <rect key="frame" x="16" y="8" width="468" height="88"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLc-wN-LeG">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yuh-Line Niou" translatesAutoresizingMaskIntoConstraints="NO" id="SLc-wN-LeG">
                             <rect key="frame" x="16" y="16" width="56" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="SLc-wN-LeG" secondAttribute="height" multiplier="1:1" id="pmA-xR-uPM"/>
@@ -68,4 +68,7 @@
             <point key="canvasLocation" x="35" y="30"/>
         </view>
     </objects>
+    <resources>
+        <image name="Yuh-Line Niou" width="709" height="1063"/>
+    </resources>
 </document>

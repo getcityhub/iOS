@@ -6,6 +6,7 @@
 //  Copyright © 2017 CityHub. All rights reserved.
 //
 
+import AspectFillFaceAware
 import UIKit
 
 class PoliticianCard: UITableViewCell {
@@ -34,8 +35,10 @@ class PoliticianCard: UITableViewCell {
         cardBackground.layer.shadowRadius = 2
         cardBackground.layer.shadowPath = shadowPath.cgPath
         
+        profileImage.layer.cornerRadius = 8
+        
         if firstRun {
-            
+            profileImage.set(image: #imageLiteral(resourceName: "Yuh-Line Niou"), focusOnFaces: true)
         }
         
         firstRun = false
