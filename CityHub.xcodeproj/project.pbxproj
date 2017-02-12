@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
+		EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B41E50CC2D0081FAFD /* Category.swift */; };
+		EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */; };
+		EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BA1E50CE550081FAFD /* CityHubClient.swift */; };
 		EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */; };
 		EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */; };
 		EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB73A2621E47B4680079CA13 /* PoliticianCard.xib */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.release.xcconfig"; sourceTree = "<group>"; };
+		EB1419B41E50CC2D0081FAFD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRoutes.swift; sourceTree = "<group>"; };
+		EB1419BA1E50CE550081FAFD /* CityHubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubClient.swift; sourceTree = "<group>"; };
 		EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubToolbarController.swift; sourceTree = "<group>"; };
 		EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianCard.swift; sourceTree = "<group>"; };
 		EB73A2621E47B4680079CA13 /* PoliticianCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoliticianCard.xib; sourceTree = "<group>"; };
@@ -91,6 +97,22 @@
 				9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB1419B61E50CC590081FAFD /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
+		EB1419B91E50CE440081FAFD /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				EB1419BA1E50CE550081FAFD /* CityHubClient.swift */,
+			);
+			name = Clients;
 			sourceTree = "<group>";
 		};
 		EB781E011E3FB91C00B7F0A4 = {
@@ -162,8 +184,10 @@
 		EB8E66581E45731D0069C8EC /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EB1419B91E50CE440081FAFD /* Clients */,
 				EB8E66591E4575DC0069C8EC /* Models */,
 				EB8E665A1E4575E20069C8EC /* Request */,
+				EB1419B61E50CC590081FAFD /* Routes */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -173,6 +197,7 @@
 			children = (
 				EBDE7BF11E439F34007057C8 /* Post.swift */,
 				EB8E665B1E4576090069C8EC /* User.swift */,
+				EB1419B41E50CC2D0081FAFD /* Category.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -328,12 +353,15 @@
 				EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
+				EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */,
 				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,
 				EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */,
+				EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */,
 				EB8E665E1E457E160069C8EC /* CityHubMenuController.swift in Sources */,
 				EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */,
 				EB8E665C1E4576090069C8EC /* User.swift in Sources */,
 				EB73A2671E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift in Sources */,
+				EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */,
 				EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */,
 				EBCF2D541E464BC700DCB577 /* CreatePostViewController.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,

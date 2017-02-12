@@ -12,7 +12,7 @@ import SwiftyJSON
 class CityHubRequest {
     
     class func request(_ endpoint: String, requestType: String = "GET", headers: [String: String] = [String: String](), params: [String: String] = [String: String](), body: AnyObject? = nil, completion: ((_ json: JSON?, _ error: CityHubRequestError?) -> Void)?) {
-        CityHubRequest.dataRequest("http://localhost:4567/api/v1/\(endpoint)", requestType: requestType, headers: headers, params: params, body: body) { (data, error) in
+        CityHubRequest.dataRequest("http://104.236.228.3:4567\(endpoint)", requestType: requestType, headers: headers, params: params, body: body) { (data, error) in
             guard let data = data else {
                 completion?(nil, error)
                 return
