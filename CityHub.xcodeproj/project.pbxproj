@@ -11,6 +11,8 @@
 		EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B41E50CC2D0081FAFD /* Category.swift */; };
 		EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */; };
 		EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BA1E50CE550081FAFD /* CityHubClient.swift */; };
+		EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BC1E50E28D0081FAFD /* PostsRoutes.swift */; };
+		EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BE1E50E3590081FAFD /* Date+CityHub.swift */; };
 		EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */; };
 		EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */; };
 		EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB73A2621E47B4680079CA13 /* PoliticianCard.xib */; };
@@ -42,6 +44,8 @@
 		EB1419B41E50CC2D0081FAFD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRoutes.swift; sourceTree = "<group>"; };
 		EB1419BA1E50CE550081FAFD /* CityHubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubClient.swift; sourceTree = "<group>"; };
+		EB1419BC1E50E28D0081FAFD /* PostsRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRoutes.swift; sourceTree = "<group>"; };
+		EB1419BE1E50E3590081FAFD /* Date+CityHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+CityHub.swift"; sourceTree = "<group>"; };
 		EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubToolbarController.swift; sourceTree = "<group>"; };
 		EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianCard.swift; sourceTree = "<group>"; };
 		EB73A2621E47B4680079CA13 /* PoliticianCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoliticianCard.xib; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */,
+				EB1419BC1E50E28D0081FAFD /* PostsRoutes.swift */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1419BA1E50CE550081FAFD /* CityHubClient.swift */,
+				EB1419BE1E50E3590081FAFD /* Date+CityHub.swift */,
 			);
 			name = Clients;
 			sourceTree = "<group>";
@@ -350,9 +356,11 @@
 			files = (
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
+				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,
 				EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
+				EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */,
 				EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */,
 				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,
 				EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */,
