@@ -61,7 +61,7 @@ class PostCreationToolbar: UIView {
             topicButton = UIButton(type: .system)
             topicButton.addTarget(self, action: #selector(topicButtonPressed), for: .touchUpInside)
             topicButton.contentHorizontalAlignment = .left
-            topicButton.setTitle("Select a topic...", for: .normal)
+            topicButton.setTitle("Select a topic...".localized, for: .normal)
             topicButton.setTitleColor(UIColor(white: 0.5, alpha: 1), for: .normal)
             topicButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
             addSubview(topicButton)
@@ -70,7 +70,7 @@ class PostCreationToolbar: UIView {
     }
     
     func updateTopic(topic: String?) {
-        topicButton.setTitle(topic ?? "Select a topic...", for: .normal)
+        topicButton.setTitle(topic ?? "Select a topic...".localized, for: .normal)
         topicButton.setTitleColor(UIColor(white: topic == nil ? 0.5 : 0.25, alpha: 1), for: .normal)
     }
     

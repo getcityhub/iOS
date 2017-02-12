@@ -1,0 +1,37 @@
+/*
+ Localizable.strings
+ CityHub
+ 
+ Created by Jack Cook on 12/02/2017.
+ Copyright © 2017 CityHub. All rights reserved.
+*/
+
+"Posts" = "Posts";
+
+"Contact your legislators" = "Contact your legislators";
+
+"Write a post" = "Write a post";
+
+"What would you like to do with this post?" = "What would you like to do with this post?";
+
+"Save" = "Save";
+
+"Report" = "Report";
+
+"Cancel" = "Cancel";
+
+"by" = "by ";
+
+"Politicians" = "Politicians";
+
+"Democrat" = "Democrat";
+
+"Republican" = "Republican";
+
+"What's up?" = "What's up?";
+
+"Select a topic..." = "Select a topic...";
+
+"Post" = "Post";
+
+"Select a Topic" = "Select a Topic";

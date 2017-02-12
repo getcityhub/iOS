@@ -13,6 +13,8 @@
 		EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BA1E50CE550081FAFD /* CityHubClient.swift */; };
 		EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BC1E50E28D0081FAFD /* PostsRoutes.swift */; };
 		EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BE1E50E3590081FAFD /* Date+CityHub.swift */; };
+		EB1419C71E50F9160081FAFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB1419C51E50F9160081FAFD /* Localizable.strings */; };
+		EB1419D51E50FF080081FAFD /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419D41E50FF080081FAFD /* String+Localized.swift */; };
 		EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */; };
 		EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */; };
 		EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB73A2621E47B4680079CA13 /* PoliticianCard.xib */; };
@@ -46,6 +48,16 @@
 		EB1419BA1E50CE550081FAFD /* CityHubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubClient.swift; sourceTree = "<group>"; };
 		EB1419BC1E50E28D0081FAFD /* PostsRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRoutes.swift; sourceTree = "<group>"; };
 		EB1419BE1E50E3590081FAFD /* Date+CityHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+CityHub.swift"; sourceTree = "<group>"; };
+		EB1419C61E50F9160081FAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB1419CC1E50FD8D0081FAFD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EB1419CD1E50FD8D0081FAFD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB1419CE1E50FDCF0081FAFD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EB1419CF1E50FDCF0081FAFD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB1419D01E50FDD30081FAFD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EB1419D11E50FDD30081FAFD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EB1419D21E50FDD80081FAFD /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EB1419D31E50FDD80081FAFD /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EB1419D41E50FF080081FAFD /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityHubToolbarController.swift; sourceTree = "<group>"; };
 		EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianCard.swift; sourceTree = "<group>"; };
 		EB73A2621E47B4680079CA13 /* PoliticianCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoliticianCard.xib; sourceTree = "<group>"; };
@@ -148,6 +160,7 @@
 				EB8E66581E45731D0069C8EC /* API */,
 				EB781E141E3FB91C00B7F0A4 /* Assets.xcassets */,
 				EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */,
+				EB1419C51E50F9160081FAFD /* Localizable.strings */,
 				EB781E191E3FB91C00B7F0A4 /* Info.plist */,
 			);
 			path = CityHub;
@@ -158,6 +171,7 @@
 			children = (
 				EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */,
 				EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */,
+				EB1419D41E50FF080081FAFD /* String+Localized.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -276,6 +290,10 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				fr,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = EB781E011E3FB91C00B7F0A4;
 			productRefGroup = EB781E0B1E3FB91C00B7F0A4 /* Products */;
@@ -292,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1419C71E50F9160081FAFD /* Localizable.strings in Resources */,
 				EB781E181E3FB91C00B7F0A4 /* LaunchScreen.storyboard in Resources */,
 				EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */,
 				EB8469841E3FC47F00A97F8D /* PostCard.xib in Resources */,
@@ -368,6 +387,7 @@
 				EB8E665E1E457E160069C8EC /* CityHubMenuController.swift in Sources */,
 				EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */,
 				EB8E665C1E4576090069C8EC /* User.swift in Sources */,
+				EB1419D51E50FF080081FAFD /* String+Localized.swift in Sources */,
 				EB73A2671E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift in Sources */,
 				EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */,
 				EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */,
@@ -384,10 +404,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EB1419C51E50F9160081FAFD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB1419C61E50F9160081FAFD /* Base */,
+				EB1419CD1E50FD8D0081FAFD /* es */,
+				EB1419CF1E50FDCF0081FAFD /* fr */,
+				EB1419D11E50FDD30081FAFD /* zh-Hans */,
+				EB1419D31E50FDD80081FAFD /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		EB781E161E3FB91C00B7F0A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EB781E171E3FB91C00B7F0A4 /* Base */,
+				EB1419CC1E50FD8D0081FAFD /* es */,
+				EB1419CE1E50FDCF0081FAFD /* fr */,
+				EB1419D01E50FDD30081FAFD /* zh-Hans */,
+				EB1419D21E50FDD80081FAFD /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -399,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -448,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

@@ -26,7 +26,7 @@ class CreatePostViewController: UIViewController, UITextViewDelegate, PostCreati
         
         textViewPlaceholder = UILabel()
         textViewPlaceholder.font = textView.font
-        textViewPlaceholder.text = "What's up?"
+        textViewPlaceholder.text = "What's up?".localized
         textViewPlaceholder.textColor = UIColor(white: 0.5, alpha: 1)
         view.addSubview(textViewPlaceholder)
         

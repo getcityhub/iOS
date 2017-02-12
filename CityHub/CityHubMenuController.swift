@@ -37,7 +37,7 @@ class CityHubMenuController: MenuController, MenuDelegate {
         postButton.button.tintColor = .white
         postButton.button.pulseColor = .white
         postButton.button.backgroundColor = Color.indigo.base
-        postButton.title = "Write a post"
+        postButton.title = "Write a post".localized
         
         let contactButton = MenuItem()
         contactButton.button.addTarget(self, action: #selector(contactButtonPressed), for: .touchUpInside)
@@ -45,7 +45,7 @@ class CityHubMenuController: MenuController, MenuDelegate {
         contactButton.button.tintColor = .white
         contactButton.button.pulseColor = .white
         contactButton.button.backgroundColor = Color.blue.base
-        contactButton.title = "Contact your legislators"
+        contactButton.title = "Contact your legislators".localized
         
         menu.delegate = self
         menu.views = [addButton, postButton, contactButton]

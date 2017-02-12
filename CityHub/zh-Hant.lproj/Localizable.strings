@@ -1,0 +1,37 @@
+/*
+ Localizable.strings
+ CityHub
+ 
+ Created by Jack Cook on 12/02/2017.
+ Copyright © 2017 CityHub. All rights reserved.
+*/
+
+"Posts" = "帖子";
+
+"Contact your legislators" = "聯繫執法者";
+
+"Write a post" = "發帖";
+
+"What would you like to do with this post?" = "你要幹什麼？";
+
+"Save" = "保存";
+
+"Report" = "舉報";
+
+"Cancel" = "取消";
+
+"by" = "作者:";
+
+"Politicians" = "政客";
+
+"Democrat" = "民主黨";
+
+"Republican" = "共和黨";
+
+"What's up?" = "什麼事？";
+
+"Select a topic..." = "選擇話題......";
+
+"Post" = "發佈";
+
+"Select a Topic" = "選擇話題";

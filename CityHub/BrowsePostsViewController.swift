@@ -22,7 +22,7 @@ class BrowsePostsViewController: UITableViewController {
         
         if let toolbar = toolbarController?.toolbar {
             toolbar.contentEdgeInsets = EdgeInsets(top: 0, left: 24, bottom: 0, right: 12)
-            toolbar.title = "Posts"
+            toolbar.title = "Posts".localized
             toolbar.titleLabel.textColor = .white
             toolbar.titleLabel.textAlignment = .left
         }

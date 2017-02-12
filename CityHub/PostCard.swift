@@ -40,6 +40,7 @@ class PostCard: UITableViewCell {
         cardBackground.layer.shadowPath = shadowPath.cgPath
         
         if firstRun {
+            authorLabel.text = "by".localized + "Jack Cook"
             moreButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
             favoriteButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
         }
@@ -56,17 +57,17 @@ class PostCard: UITableViewCell {
     // MARK: IBActions
     
     @IBAction func moreButtonPressed(sender: UIButton) {
-        let controller = UIAlertController(title: nil, message: "What would you like to do with this post?", preferredStyle: .actionSheet)
+        let controller = UIAlertController(title: nil, message: "What would you like to do with this post?".localized, preferredStyle: .actionSheet)
         
-        let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
+        let saveAction = UIAlertAction(title: "Save".localized, style: .default) { (action) in
             
         }
         
-        let reportAction = UIAlertAction(title: "Report", style: .destructive) { (action) in
+        let reportAction = UIAlertAction(title: "Report".localized, style: .destructive) { (action) in
             
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel, handler: nil)
         
         controller.addAction(saveAction)
         controller.addAction(reportAction)
