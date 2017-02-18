@@ -3,9 +3,9 @@ PODS:
   - Material (2.4.16):
     - Material/Core (= 2.4.16)
   - Material/Core (2.4.16)
-  - Motion (1.0.2):
-    - Motion/Core (= 1.0.2)
-  - Motion/Core (1.0.2)
+  - Motion (1.0.3):
+    - Motion/Core (= 1.0.3)
+  - Motion/Core (1.0.3)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -17,7 +17,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AspectFillFaceAware: 9923f5ded5c1c915692f98ba62bf22c0a2fa2b9e
   Material: 84645fb4c9409c3db76bd7c8e1fd00dc4a76c144
-  Motion: d9b1f29e7e08df32a1b03bd194f785e51b3a40cf
+  Motion: 6665469c8268bc424c1c3d8e8f7bc99e28178666
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
 PODFILE CHECKSUM: fac8fdc15c99f6101ed722b44a1c781758f366bd

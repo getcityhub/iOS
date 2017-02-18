@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
+		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
 		EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B41E50CC2D0081FAFD /* Category.swift */; };
 		EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */; };
 		EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BA1E50CE550081FAFD /* CityHubClient.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
+		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
 		9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.release.xcconfig"; sourceTree = "<group>"; };
 		EB1419B41E50CC2D0081FAFD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRoutes.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				EBDE7BF11E439F34007057C8 /* Post.swift */,
 				EB8E665B1E4576090069C8EC /* User.swift */,
 				EB1419B41E50CC2D0081FAFD /* Category.swift */,
+				75BFF9E01E584CE7005FB84E /* Politician.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */,
 				EBCF2D571E464C0100DCB577 /* CreatePostToolbarController.swift in Sources */,
 				EBCF2D541E464BC700DCB577 /* CreatePostViewController.swift in Sources */,
+				75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */,
 				EB781E0E1E3FB91C00B7F0A4 /* AppDelegate.swift in Sources */,
 				EBDE7BF21E439F34007057C8 /* Post.swift in Sources */,
 				EBCF2D5D1E46B88800DCB577 /* PostCreationToolbar.swift in Sources */,
