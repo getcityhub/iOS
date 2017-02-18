@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
 		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
+		75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */; };
+		75BFF9E51E585187005FB84E /* PoliticiansRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */; };
 		EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B41E50CC2D0081FAFD /* Category.swift */; };
 		EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */; };
 		EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BA1E50CE550081FAFD /* CityHubClient.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
 		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
+		75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRoutes.swift; sourceTree = "<group>"; };
+		75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticiansRoutes.swift; sourceTree = "<group>"; };
 		9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.release.xcconfig"; sourceTree = "<group>"; };
 		EB1419B41E50CC2D0081FAFD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRoutes.swift; sourceTree = "<group>"; };
@@ -121,7 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */,
+				75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */,
 				EB1419BC1E50E28D0081FAFD /* PostsRoutes.swift */,
+				75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,
 				EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */,
+				75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
 				EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */,
@@ -402,6 +409,7 @@
 				EB95064F1E443AD400F8A745 /* CityHubRequestError.swift in Sources */,
 				EB73A2651E47C2090079CA13 /* BrowsePoliticiansViewController.swift in Sources */,
 				EBCF2D5F1E46C04F00DCB577 /* SelectTopicToolbarController.swift in Sources */,
+				75BFF9E51E585187005FB84E /* PoliticiansRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

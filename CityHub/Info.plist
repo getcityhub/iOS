@@ -24,7 +24,14 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>104.236.228.3</key>
+			<key>getcityhub.org</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>localhost</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>

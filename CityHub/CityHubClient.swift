@@ -16,8 +16,14 @@ class CityHubClient {
     }
     
     public let categories: CategoriesRoutes
+    public let politicians: PoliticiansRoutes
+    public let posts: PostsRoutes
+    public let users: UsersRoutes
     
     private init() {
         categories = CategoriesRoutes()
+        politicians = PoliticiansRoutes()
+        posts = PostsRoutes()
+        users = UsersRoutes()
     }
 }

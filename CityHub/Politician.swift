@@ -13,15 +13,15 @@ struct Politician {
     var id: Int
     var name: String
     var zipcodes: [Int]
-    var position: String
-    var party: String
-    var email: String
-    var phone: String
-    var website: String
-    var facebook: String
-    var googleplus: String
-    var twitter: String
-    var youtube: String
+    var position: String?
+    var party: String?
+    var email: String?
+    var phone: String?
+    var website: String?
+    var facebook: String?
+    var googleplus: String?
+    var twitter: String?
+    var youtube: String?
     var createdAt: Date
     var updatedAt: Date
     
@@ -39,15 +39,15 @@ struct Politician {
             }
         }
         
-        position = json["position"].string ?? ""
-        party = json["party"].string ?? ""
-        email = json["email"].string ?? ""
-        phone = json["phone"].string ?? ""
-        website = json["website"].string ?? ""
-        facebook = json["facebook"].string ?? ""
-        googleplus = json["googleplus"].string ?? ""
-        twitter = json["twitter"].string ?? ""
-        youtube = json["youtube"].string ?? ""
+        position = json["position"].string
+        party = json["party"].string
+        email = json["email"].string
+        phone = json["phone"].string
+        website = json["website"].string
+        facebook = json["facebook"].string
+        googleplus = json["googleplus"].string
+        twitter = json["twitter"].string
+        youtube = json["youtube"].string
         createdAt = Date.fromCityHub(json["createdAt"].string)
         updatedAt = Date.fromCityHub(json["updatedAt"].string)
     }
