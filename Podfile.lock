@@ -1,8 +1,8 @@
 PODS:
   - AspectFillFaceAware (1.0.0)
-  - Material (2.4.16):
-    - Material/Core (= 2.4.16)
-  - Material/Core (2.4.16)
+  - Material (2.4.19):
+    - Material/Core (= 2.4.19)
+  - Material/Core (2.4.19)
   - Motion (1.0.3):
     - Motion/Core (= 1.0.3)
   - Motion/Core (1.0.3)
@@ -16,7 +16,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AspectFillFaceAware: 9923f5ded5c1c915692f98ba62bf22c0a2fa2b9e
-  Material: 84645fb4c9409c3db76bd7c8e1fd00dc4a76c144
+  Material: 67b52869f68ab95757e14801ffba0a52a4f19c31
   Motion: 6665469c8268bc424c1c3d8e8f7bc99e28178666
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 

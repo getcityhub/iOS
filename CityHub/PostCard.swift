@@ -40,7 +40,6 @@ class PostCard: UITableViewCell {
         cardBackground.layer.shadowPath = shadowPath.cgPath
         
         if firstRun {
-            authorLabel.text = "by".localized + "Jack Cook"
             moreButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
             favoriteButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
         }
@@ -50,8 +49,14 @@ class PostCard: UITableViewCell {
     
     // MARK: Public Methods
     
-    func configure(text: String) {
-        contentLabel.text = text
+    func configure(_ post: Post) {
+        titleLabel.text = post.title
+        authorLabel.text = "by".localized + String(post.authorId)
+        contentLabel.text = post.text
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        dateLabel.text = formatter.string(from: post.createdAt)
     }
     
     // MARK: IBActions
