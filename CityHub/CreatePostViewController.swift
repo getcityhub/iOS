@@ -6,6 +6,7 @@
 //  Copyright © 2017 CityHub. All rights reserved.
 //
 
+import SVProgressHUD
 import UIKit
 
 class CreatePostViewController: UIViewController, UITextViewDelegate, PostCreationToolbarDelegate {
@@ -89,5 +90,25 @@ class CreatePostViewController: UIViewController, UITextViewDelegate, PostCreati
         
         let container = SelectTopicToolbarController(rootViewController: stvc)
         present(container, animated: true, completion: nil)
+    }
+    
+    func postButtonPressed() {
+        SVProgressHUD.show()
+        
+        CityHubClient.shared.posts.createPost(authorId: 1, title: "Testing", categoryId: 1, language: "en-US", text: textView.text) { (post, error) in
+            guard error == nil else {
+                SVProgressHUD.showError(withStatus: "Post failed")
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    SVProgressHUD.dismiss()
+                }
+                
+                return
+            }
+            
+            SVProgressHUD.dismiss()
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

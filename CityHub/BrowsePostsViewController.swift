@@ -21,18 +21,6 @@ class BrowsePostsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CityHubClient.shared.posts.getPosts(categoryId: nil, language: nil, zipcode: nil) { (posts, error) in
-            guard let posts = posts else {
-                return
-            }
-            
-            self.posts = posts
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-        
         if let toolbar = toolbarController?.toolbar {
             toolbar.contentEdgeInsets = EdgeInsets(top: 0, left: 24, bottom: 0, right: 12)
             toolbar.title = "Posts".localized
@@ -45,6 +33,22 @@ class BrowsePostsViewController: UITableViewController {
         tableView.estimatedRowHeight = 139
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        CityHubClient.shared.posts.getPosts(categoryId: nil, language: nil, zipcode: nil) { (posts, error) in
+            guard let posts = posts else {
+                return
+            }
+            
+            self.posts = posts
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: UITableViewDataSource Methods

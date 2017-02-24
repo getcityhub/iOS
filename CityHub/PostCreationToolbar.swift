@@ -50,8 +50,9 @@ class PostCreationToolbar: UIView {
         
         if postButton == nil {
             postButton = RaisedButton(title: "Post", titleColor: .white)
-            postButton.pulseColor = .white
+            postButton.addTarget(self, action: #selector(postButtonPressed), for: .touchUpInside)
             postButton.backgroundColor = Color.blue.base
+            postButton.pulseColor = .white
             addSubview(postButton)
         }
         postButton.sizeToFit()
@@ -74,6 +75,10 @@ class PostCreationToolbar: UIView {
         topicButton.setTitleColor(UIColor(white: topic == nil ? 0.5 : 0.25, alpha: 1), for: .normal)
     }
     
+    @objc private func postButtonPressed(sender: UIButton) {
+        delegate?.postButtonPressed()
+    }
+    
     @objc private func topicButtonPressed(sender: UIButton) {
         delegate?.topicButtonPressed()
     }
@@ -81,4 +86,5 @@ class PostCreationToolbar: UIView {
 
 protocol PostCreationToolbarDelegate {
     func topicButtonPressed()
+    func postButtonPressed()
 }
