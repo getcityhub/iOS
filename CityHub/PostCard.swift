@@ -51,7 +51,7 @@ class PostCard: UITableViewCell {
     
     func configure(_ post: Post) {
         titleLabel.text = post.title
-        authorLabel.text = "by".localized + (post.author.anonymous ? "Anonymous" : "\(post.author.firstName) \(post.author.lastName)")
+        authorLabel.text = "by".localized + (post.author.anonymous ? "Anonymous".localized : "\(post.author.firstName) \(post.author.lastName)")
         contentLabel.text = post.text
         
         let formatter = DateFormatter()

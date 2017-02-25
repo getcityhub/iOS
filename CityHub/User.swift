@@ -24,7 +24,7 @@ struct User {
         id = json["id"].int ?? 0
         firstName = json["firstName"].string ?? ""
         lastName = json["lastName"].string ?? ""
-        anonymous = json["anonymous"].bool ?? false
+        anonymous = json["anonymous"].bool ?? true
         
         languages = [String]()
         

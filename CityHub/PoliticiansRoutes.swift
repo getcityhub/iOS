@@ -15,6 +15,7 @@ class PoliticiansRoutes {
         
         if let zipcode = zipcode {
             params["zip"] = zipcode
+            params["lang"] = Language.current.rawValue
         }
         
         CityHubRequest.request("/politicians", params: params) { json, error in
