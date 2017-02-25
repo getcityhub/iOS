@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class CityHubRequest {
     
-    private static var baseURL = "http://172.20.10.7:4567"
+    private static var baseURL = "http://localhost:4567"
     
     class func request(_ endpoint: String, requestType: String = "GET", headers: [String: String] = [String: String](), params: [String: String] = [String: String](), body: Any? = nil, completion: ((_ json: JSON?, _ error: CityHubRequestError?) -> Void)?) {
         CityHubRequest.dataRequest("\(baseURL)\(endpoint)", requestType: requestType, headers: headers, params: params, body: body) { (data, error) in

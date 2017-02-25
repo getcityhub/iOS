@@ -13,6 +13,7 @@ struct Post {
     var id: Int
     var title: String
     var authorId: Int
+    var author: User
     var categoryId: Int
     var text: String
     var language: String
@@ -23,6 +24,7 @@ struct Post {
         id = json["id"].int ?? 0
         title = json["title"].string ?? ""
         authorId = json["authorId"].int ?? 0
+        author = User(json: json["author"])
         categoryId = json["categoryId"].int ?? 0
         text = json["text"].string ?? ""
         language = json["language"].string ?? ""
