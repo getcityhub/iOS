@@ -45,6 +45,8 @@ class CityHubRequest {
             }
         }
         
+        request.addValue(Language.current.rawValue, forHTTPHeaderField: "Accept-Language")
+        
         for (header, val) in headers {
             request.addValue(val, forHTTPHeaderField: header)
         }
