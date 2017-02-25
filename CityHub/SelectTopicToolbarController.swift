@@ -30,6 +30,7 @@ class SelectTopicToolbarController: ToolbarController {
         toolbar.backgroundColor = Color.blue.darken2
         toolbar.leftViews = [closeButton]
         toolbar.title = "Select a Topic".localized
+        toolbar.titleLabel.textAlignment = .left
         toolbar.titleLabel.textColor = .white
     }
     

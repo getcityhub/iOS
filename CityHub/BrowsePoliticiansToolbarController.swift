@@ -29,6 +29,9 @@ class BrowsePoliticiansToolbarController: ToolbarController {
         
         toolbar.backgroundColor = Color.blue.darken2
         toolbar.leftViews = [closeButton]
+        toolbar.title = "Politicians"
+        toolbar.titleLabel.textAlignment = .left
+        toolbar.titleLabel.textColor = .white
     }
     
     @objc private func closeButtonPressed(sender: IconButton) {
