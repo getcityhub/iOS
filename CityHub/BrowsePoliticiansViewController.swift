@@ -49,13 +49,43 @@ class BrowsePoliticiansViewController: UITableViewController {
         return politicians.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var contactMethods = 0
+        
+        let politician = politicians[indexPath.row]
+        
+        func check(_ data: String?) {
+            if data != nil {
+                contactMethods += 1
+            }
+        }
+        
+        check(politician.phone)
+        check(politician.email)
+        check(politician.website)
+        check(politician.facebook)
+        check(politician.twitter)
+        check(politician.youtube)
+        check(politician.googleplus)
+        
+        var contactMethodsHeight: CGFloat = 0
+        
+        if contactMethods > 0 {
+            contactMethodsHeight = 16 + CGFloat(contactMethods) * 36 - 12
+        } else {
+            contactMethodsHeight = 0
+        }
+        
+        return 104 + contactMethodsHeight
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = politicianCells[indexPath] {
             return cell
         } else {
             let politician = politicians[indexPath.row]
             
-            let cell = Bundle.main.loadNibNamed(politician.photoUrl == nil ? "NoImagePoliticianCard" : "PoliticianCard", owner: self, options: nil)![0] as! PoliticianCard
+            let cell = PoliticianCard()
             cell.configure(politician)
             
             politicianCells[indexPath] = cell
