@@ -6,6 +6,7 @@ PODS:
   - Motion (1.0.3):
     - Motion/Core (= 1.0.3)
   - Motion/Core (1.0.3)
+  - STXImageCache (1.0.2)
   - SVProgressHUD (2.1.2)
   - SwiftyJSON (3.1.4)
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - AspectFillFaceAware (~> 1.0)
   - Material (~> 2.4)
   - Motion (~> 1.0)
+  - STXImageCache (~> 1.0)
   - SVProgressHUD (~> 2.1)
   - SwiftyJSON (~> 3.1)
 
@@ -20,9 +22,10 @@ SPEC CHECKSUMS:
   AspectFillFaceAware: 9923f5ded5c1c915692f98ba62bf22c0a2fa2b9e
   Material: 67b52869f68ab95757e14801ffba0a52a4f19c31
   Motion: 6665469c8268bc424c1c3d8e8f7bc99e28178666
+  STXImageCache: d41f98b0d35426f1dd94f5ae80f7437027da64d1
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 431da4b25b56aaa7951e566687545bed8edf3bb9
+PODFILE CHECKSUM: 8288a3f310d5c8259970b07d36b54d292c1d2b2f
 
 COCOAPODS: 1.2.0

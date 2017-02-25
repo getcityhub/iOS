@@ -13,6 +13,7 @@ class BrowsePoliticiansViewController: UITableViewController {
     // MARK: Properties
     
     private var politicianCells = [IndexPath: UITableViewCell]()
+    private var politicians = [Politician]()
     
     // MARK: View Life Cycle
     
@@ -26,17 +27,37 @@ class BrowsePoliticiansViewController: UITableViewController {
         tableView.separatorStyle = .none
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        CityHubClient.shared.politicians.getPoliticians(zipcode: "10028") { (politicians, error) in
+            guard let politicians = politicians else {
+                return
+            }
+            
+            self.politicians = politicians
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     // MARK: UITableViewDataSource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return politicians.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = politicianCells[indexPath] {
             return cell
         } else {
-            let cell = Bundle.main.loadNibNamed("PoliticianCard", owner: self, options: nil)![0] as! PoliticianCard
+            let politician = politicians[indexPath.row]
+            
+            let cell = Bundle.main.loadNibNamed(politician.photoUrl == nil ? "NoImagePoliticianCard" : "PoliticianCard", owner: self, options: nil)![0] as! PoliticianCard
+            cell.configure(politician)
+            
             politicianCells[indexPath] = cell
             return cell
         }

@@ -15,6 +15,7 @@ struct Politician {
     var zipcodes: [Int]
     var position: String?
     var party: String?
+    var photoUrl: String?
     var email: String?
     var phone: String?
     var website: String?
@@ -41,6 +42,7 @@ struct Politician {
         
         position = json["position"].string
         party = json["party"].string
+        photoUrl = json["photoUrl"].string
         email = json["email"].string
         phone = json["phone"].string
         website = json["website"].string

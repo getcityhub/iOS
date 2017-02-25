@@ -7,6 +7,7 @@
 //
 
 import AspectFillFaceAware
+import STXImageCache
 import UIKit
 
 class PoliticianCard: UITableViewCell {
@@ -14,7 +15,7 @@ class PoliticianCard: UITableViewCell {
     // MARK: Properties
     
     @IBOutlet weak var cardBackground: UIView!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView?
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var phoneIcon: UIImageView!
@@ -39,7 +40,7 @@ class PoliticianCard: UITableViewCell {
         cardBackground.layer.shadowRadius = 2
         cardBackground.layer.shadowPath = shadowPath.cgPath
         
-        profileImage.layer.cornerRadius = 8
+        profileImage?.layer.cornerRadius = 8
         
         phoneIcon.image = phoneIcon.image?.withRenderingMode(.alwaysTemplate)
         phoneIcon.tintColor = UIColor(red: 136/255, green: 136/255, blue: 136/255, alpha: 1)
@@ -47,10 +48,35 @@ class PoliticianCard: UITableViewCell {
         emailIcon.image = emailIcon.image?.withRenderingMode(.alwaysTemplate)
         emailIcon.tintColor = UIColor(red: 136/255, green: 136/255, blue: 136/255, alpha: 1)
         
-        if firstRun {
-            profileImage.set(image: #imageLiteral(resourceName: "Yuh-Line Niou"), focusOnFaces: true)
+        firstRun = false
+    }
+    
+    // MARK: Public Methods
+    
+    func configure(_ politician: Politician) {
+        if let photoUrl = politician.photoUrl, let url = URL(string: photoUrl) {
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            
+            let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
+                if let data = data, let image = UIImage(data: data) {
+                    self.profileImage?.set(image: image, focusOnFaces: true)
+                }
+            })
+            
+            task.resume()
         }
         
-        firstRun = false
+        nameLabel.text = politician.name
+        
+        if let position = politician.position {
+            if let party = politician.party {
+                positionLabel.text = "\(party) • \(position)"
+            } else {
+                positionLabel.text = "\(position)"
+            }
+        }
+        
+        phoneLabel.text = politician.phone
+        emailLabel.text = politician.email
     }
 }

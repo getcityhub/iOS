@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
+		752385BE1E61ACDA0070AF9C /* NoImagePoliticianCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752385BD1E61ACDA0070AF9C /* NoImagePoliticianCard.xib */; };
 		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
 		75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */; };
 		75BFF9E51E585187005FB84E /* PoliticiansRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
+		752385BD1E61ACDA0070AF9C /* NoImagePoliticianCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoImagePoliticianCard.xib; sourceTree = "<group>"; };
 		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
 		75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRoutes.swift; sourceTree = "<group>"; };
 		75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticiansRoutes.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */,
 				EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */,
 				EB73A2621E47B4680079CA13 /* PoliticianCard.xib */,
+				752385BD1E61ACDA0070AF9C /* NoImagePoliticianCard.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				EB1419C71E50F9160081FAFD /* Localizable.strings in Resources */,
 				EB781E181E3FB91C00B7F0A4 /* LaunchScreen.storyboard in Resources */,
+				752385BE1E61ACDA0070AF9C /* NoImagePoliticianCard.xib in Resources */,
 				EB73A2631E47B4680079CA13 /* PoliticianCard.xib in Resources */,
 				EB8469841E3FC47F00A97F8D /* PostCard.xib in Resources */,
 				EB781E151E3FB91C00B7F0A4 /* Assets.xcassets in Resources */,
