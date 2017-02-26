@@ -10,7 +10,24 @@ import SwiftyJSON
 
 class UsersRoutes {
     
-    func createUser(firstName: String, lastName: String, anonymous: Bool, zipcode: String, languages: [String], email: String, completion: ((_ user: User?, _ error: CityHubRequestError?) -> Void)?) {
+    func login(email: String, password: String, completion: ((_ user: User?, _ error: CityHubRequestError?) -> Void)?) {
+        let body = [
+            "email": email,
+            "password": password
+        ] as [String: Any]
+        
+        CityHubRequest.request("/users/login", requestType: "POST", body: body) { json, error in
+            guard let json = json else {
+                completion?(nil, error)
+                return
+            }
+            
+            let user = User(json: json)
+            completion?(user, error)
+        }
+    }
+    
+    func register(firstName: String, lastName: String, anonymous: Bool, zipcode: String, languages: [String], email: String, completion: ((_ user: User?, _ error: CityHubRequestError?) -> Void)?) {
         let body = [
             "firstName": firstName,
             "lastName": lastName,
@@ -18,7 +35,7 @@ class UsersRoutes {
             "zipcode": zipcode,
             "languages": languages,
             "email": email
-        ] as [String : Any]
+        ] as [String: Any]
         
         CityHubRequest.request("/users", requestType: "POST", body: body) { json, error in
             guard let json = json else {

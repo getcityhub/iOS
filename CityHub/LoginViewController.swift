@@ -11,10 +11,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
-    
     private var closeButton: UIButton!
     private var titleLabel: UILabel!
     private var emailField: TextField!
@@ -56,7 +52,6 @@ class LoginViewController: UIViewController {
             emailField.spellCheckingType = .no
             view.addSubview(emailField)
         }
-        emailField.sizeToFit()
         emailField.frame = CGRect(x: 32, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 56, width: view.frame.size.width - 64, height: 32)
         
         if passwordField == nil {
@@ -91,6 +86,7 @@ class LoginViewController: UIViewController {
         
         if registerButton == nil {
             registerButton = FlatButton()
+            registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
             registerButton.title = "Create account"
             registerButton.titleColor = Color.blue.base
             registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
@@ -110,6 +106,11 @@ class LoginViewController: UIViewController {
     
     @objc private func closeButtonPressed(sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func registerButtonPressed(sender: FlatButton) {
+        let rvc = RegisterViewController()
+        present(rvc, animated: true, completion: nil)
     }
     
     @objc private func nextButtonPressed(sender: RaisedButton) {
