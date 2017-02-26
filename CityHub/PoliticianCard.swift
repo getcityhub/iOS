@@ -88,9 +88,9 @@ class PoliticianCard: UITableViewCell {
         }
         nameLabel.sizeToFit()
         if let profileImage = profileImage {
-            nameLabel.frame = CGRect(x: profileImage.frame.origin.x + profileImage.frame.size.width + 16, y: 20, width: nameLabel.frame.size.width, height: nameLabel.frame.size.height)
+            nameLabel.frame = CGRect(x: profileImage.frame.origin.x + profileImage.frame.size.width + 16, y: 20, width: cardBackground.frame.size.width - profileImage.frame.origin.x - profileImage.frame.size.width - 32, height: nameLabel.frame.size.height)
         } else {
-            nameLabel.frame = CGRect(x: 16, y: 20, width: nameLabel.frame.size.width, height: nameLabel.frame.size.height)
+            nameLabel.frame = CGRect(x: 16, y: 20, width: cardBackground.frame.size.width - 32, height: nameLabel.frame.size.height)
         }
         
         if positionLabel == nil {
@@ -108,7 +108,7 @@ class PoliticianCard: UITableViewCell {
             }
         }
         positionLabel.sizeToFit()
-        positionLabel.frame = CGRect(x: nameLabel.frame.origin.x, y: nameLabel.frame.origin.y + nameLabel.frame.size.height + 4, width: positionLabel.frame.size.width, height: positionLabel.frame.size.height)
+        positionLabel.frame = CGRect(x: nameLabel.frame.origin.x, y: nameLabel.frame.origin.y + nameLabel.frame.size.height + 4, width: cardBackground.frame.size.width - nameLabel.frame.origin.x - 16, height: positionLabel.frame.size.height)
         
         for (idx, imageView) in contactImageViews.enumerated() {
             imageView.frame = CGRect(x: 32, y: idx == 0 ? positionLabel.frame.origin.y + positionLabel.frame.size.height + 16 : contactImageViews[idx - 1].frame.origin.y + contactImageViews[idx - 1].frame.size.height + 12, width: 24, height: 24)
@@ -118,7 +118,7 @@ class PoliticianCard: UITableViewCell {
             let imageView = contactImageViews[idx]
             
             button.sizeToFit()
-            button.frame = CGRect(x: imageView.frame.origin.x + imageView.frame.size.width + 32, y: imageView.frame.origin.y + (imageView.frame.size.height - button.frame.size.height) / 2, width: button.frame.size.width, height: button.frame.size.height)
+            button.frame = CGRect(x: imageView.frame.origin.x + imageView.frame.size.width + 32, y: imageView.frame.origin.y + (imageView.frame.size.height - button.frame.size.height) / 2, width: cardBackground.frame.size.width - imageView.frame.origin.x - imageView.frame.size.width - 48, height: button.frame.size.height)
         }
     }
     
@@ -154,6 +154,7 @@ class PoliticianCard: UITableViewCell {
             
             let button = UIButton()
             button.addTarget(self, action: #selector(contactButtonPressed(sender:)), for: .touchUpInside)
+            button.contentHorizontalAlignment = .left
             button.setTitle(data, for: .normal)
             button.setTitleColor(UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1), for: .normal)
             button.tag = position
