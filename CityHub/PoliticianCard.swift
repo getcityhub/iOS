@@ -63,14 +63,16 @@ class PoliticianCard: UITableViewCell {
             profileImage?.masksToBounds = true
             cardBackground.addSubview(profileImage!)
             
-            if let photoUrl = politician.photoUrl, let url = URL(string: photoUrl) {
+            if let photoUrl = politician.photoUrl, let url = URL(string: "http://104.236.36.26/168x/\(photoUrl)") {
                 let session = URLSession(configuration: URLSessionConfiguration.default)
                 
-                let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
+                let task = session.dataTask(with: url) { (data, response, error) in
                     if let data = data, let image = UIImage(data: data) {
-                        self.profileImage?.set(image: image, focusOnFaces: true)
+                        DispatchQueue.main.async {
+                            self.profileImage?.set(image: image, focusOnFaces: true)
+                        }
                     }
-                })
+                }
                 
                 task.resume()
             }
