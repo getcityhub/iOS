@@ -31,7 +31,7 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>congress.gov</key>
+			<key>104.236.36.26</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
@@ -46,20 +46,6 @@
 				<true/>
 			</dict>
 			<key>localhost</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-			<key>ny.gov</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-			<key>nyc.gov</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
