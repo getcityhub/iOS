@@ -14,8 +14,9 @@ struct User {
     var firstName: String
     var lastName: String
     var anonymous: Bool
+    var zipcode: Int
     var languages: [String]
-    var topics: [String]
+    var email: String
     var uniqueCode: String
     var createdAt: Date
     var updatedAt: Date
@@ -25,6 +26,7 @@ struct User {
         firstName = json["firstName"].string ?? ""
         lastName = json["lastName"].string ?? ""
         anonymous = json["anonymous"].bool ?? true
+        zipcode = json["zipcode"].int ?? 10000
         
         languages = [String]()
         
@@ -36,16 +38,7 @@ struct User {
             }
         }
         
-        topics = [String]()
-        
-        if let topics = json["topics"].array {
-            for topic in topics {
-                if let topic = topic.string {
-                    self.topics.append(topic)
-                }
-            }
-        }
-        
+        email = json["email"].string ?? ""
         uniqueCode = json["uniqueCode"].string ?? ""
         createdAt = Date.fromCityHub(json["createdAt"].string)
         updatedAt = Date.fromCityHub(json["updatedAt"].string)

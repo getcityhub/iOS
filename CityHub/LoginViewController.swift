@@ -7,9 +7,10 @@
 //
 
 import Material
+import SVProgressHUD
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private var closeButton: UIButton!
     private var titleLabel: UILabel!
@@ -46,6 +47,8 @@ class LoginViewController: UIViewController {
         if emailField == nil {
             emailField = TextField()
             emailField.autocapitalizationType = .none
+            emailField.autocorrectionType = .no
+            emailField.delegate = self
             emailField.keyboardType = .emailAddress
             emailField.placeholder = "Enter your email"
             emailField.returnKeyType = .next
@@ -56,6 +59,7 @@ class LoginViewController: UIViewController {
         
         if passwordField == nil {
             passwordField = TextField()
+            passwordField.delegate = self
             passwordField.isSecureTextEntry = true
             passwordField.placeholder = "Enter your password"
             passwordField.returnKeyType = .done
@@ -113,7 +117,30 @@ class LoginViewController: UIViewController {
         present(rvc, animated: true, completion: nil)
     }
     
-    @objc private func nextButtonPressed(sender: RaisedButton) {
-        print("next")
+    @objc private func nextButtonPressed(sender: RaisedButton?) {
+        SVProgressHUD.show()
+        
+        CityHubClient.shared.users.login(email: emailField.text ?? "", password: passwordField.text ?? "") { user, error in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
+            guard let _ = user, error == nil else {
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailField {
+            let _ = passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            passwordField.resignFirstResponder()
+            nextButtonPressed(sender: nil)
+        }
+        
+        return true
     }
 }

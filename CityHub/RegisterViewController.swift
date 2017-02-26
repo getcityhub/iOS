@@ -7,9 +7,10 @@
 //
 
 import Material
+import SVProgressHUD
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     private var closeButton: UIButton!
     private var titleLabel: UILabel!
@@ -48,6 +49,7 @@ class RegisterViewController: UIViewController {
         
         if firstNameField == nil {
             firstNameField = TextField()
+            firstNameField.delegate = self
             firstNameField.placeholder = "First name"
             firstNameField.returnKeyType = .next
             view.addSubview(firstNameField)
@@ -56,6 +58,7 @@ class RegisterViewController: UIViewController {
         
         if lastNameField == nil {
             lastNameField = TextField()
+            lastNameField.delegate = self
             lastNameField.placeholder = "Last name"
             lastNameField.returnKeyType = .next
             view.addSubview(lastNameField)
@@ -66,6 +69,7 @@ class RegisterViewController: UIViewController {
             emailField = TextField()
             emailField.autocapitalizationType = .none
             emailField.autocorrectionType = .no
+            emailField.delegate = self
             emailField.keyboardType = .emailAddress
             emailField.placeholder = "Enter your email address"
             emailField.returnKeyType = .next
@@ -75,6 +79,7 @@ class RegisterViewController: UIViewController {
         
         if passwordField == nil {
             passwordField = TextField()
+            passwordField.delegate = self
             passwordField.isSecureTextEntry = true
             passwordField.placeholder = "Choose a password"
             passwordField.returnKeyType = .next
@@ -84,6 +89,7 @@ class RegisterViewController: UIViewController {
         
         if zipcodeField == nil {
             zipcodeField = TextField()
+            zipcodeField.delegate = self
             zipcodeField.keyboardType = .numberPad
             zipcodeField.placeholder = "Enter your zipcode"
             zipcodeField.returnKeyType = .next
@@ -136,6 +142,34 @@ class RegisterViewController: UIViewController {
     }
     
     @objc private func nextButtonPressed(sender: UIButton) {
-        print("hi")
+        SVProgressHUD.show()
+        
+        CityHubClient.shared.users.register(firstName: firstNameField.text ?? "", lastName: lastNameField.text ?? "", anonymous: anonymousSwitch.isOn, zipcode: zipcodeField.text ?? "", languages: ["en-US"], email: emailField.text ?? "") { user, error in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
+            guard let _ = user, error == nil else {
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == firstNameField {
+            let _ = lastNameField.becomeFirstResponder()
+        } else if textField == lastNameField {
+            let _ = emailField.becomeFirstResponder()
+        } else if textField == emailField {
+            let _ = passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            let _ = zipcodeField.becomeFirstResponder()
+        } else if textField == zipcodeField {
+            zipcodeField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
