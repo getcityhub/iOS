@@ -13,6 +13,7 @@ import UIKit
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     private var closeButton: UIButton!
+    private var containerView: UIView!
     private var titleLabel: UILabel!
     private var firstNameField: TextField!
     private var lastNameField: TextField!
@@ -23,20 +24,32 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     private var anonymousSwitch: Switch!
     private var nextButton: RaisedButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .white
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        view.backgroundColor = .white
+        if containerView == nil {
+            containerView = UIView()
+            view.addSubview(containerView)
+        }
         
         if titleLabel == nil {
             titleLabel = UILabel()
             titleLabel.font = UIFont.systemFont(ofSize: 28, weight: UIFontWeightSemibold)
             titleLabel.text = "Register"
             titleLabel.textColor = .black
-            view.addSubview(titleLabel)
+            containerView.addSubview(titleLabel)
         }
         titleLabel.sizeToFit()
-        titleLabel.frame = CGRect(x: 32, y: UIApplication.shared.statusBarFrame.size.height + 32, width: titleLabel.frame.size.width, height: titleLabel.frame.size.height)
+        titleLabel.frame = CGRect(x: 32, y: 0, width: titleLabel.frame.size.width, height: titleLabel.frame.size.height)
         
         if closeButton == nil {
             closeButton = UIButton()
@@ -45,25 +58,25 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             closeButton.setImage(#imageLiteral(resourceName: "Close"), for: .normal)
             view.addSubview(closeButton)
         }
-        closeButton.frame = CGRect(x: view.frame.size.width - 32 - 32 - 16 - 8, y: titleLabel.frame.origin.y + (titleLabel.frame.size.height - 64) / 2, width: 64, height: 64)
+        closeButton.frame = CGRect(x: view.frame.size.width - 32 - 32 - 16 - 8, y: UIApplication.shared.statusBarFrame.size.height + 32 + (titleLabel.frame.size.height - 64) / 2, width: 64, height: 64)
         
         if firstNameField == nil {
             firstNameField = TextField()
             firstNameField.delegate = self
             firstNameField.placeholder = "First name"
             firstNameField.returnKeyType = .next
-            view.addSubview(firstNameField)
+            containerView.addSubview(firstNameField)
         }
-        firstNameField.frame = CGRect(x: 32, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 56, width: view.frame.size.width / 2 - 48, height: 32)
+        firstNameField.frame = CGRect(x: 32, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 56, width: containerView.frame.size.width / 2 - 48, height: 32)
         
         if lastNameField == nil {
             lastNameField = TextField()
             lastNameField.delegate = self
             lastNameField.placeholder = "Last name"
             lastNameField.returnKeyType = .next
-            view.addSubview(lastNameField)
+            containerView.addSubview(lastNameField)
         }
-        lastNameField.frame = CGRect(x: view.frame.size.width / 2 + 16, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 56, width: view.frame.size.width / 2 - 48, height: 32)
+        lastNameField.frame = CGRect(x: containerView.frame.size.width / 2 + 16, y: titleLabel.frame.origin.y + titleLabel.frame.size.height + 56, width: containerView.frame.size.width / 2 - 48, height: 32)
         
         if emailField == nil {
             emailField = TextField()
@@ -73,9 +86,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             emailField.keyboardType = .emailAddress
             emailField.placeholder = "Enter your email address"
             emailField.returnKeyType = .next
-            view.addSubview(emailField)
+            containerView.addSubview(emailField)
         }
-        emailField.frame = CGRect(x: 32, y: firstNameField.frame.origin.y + firstNameField.frame.size.height + 40, width: view.frame.size.width - 64, height: 32)
+        emailField.frame = CGRect(x: 32, y: firstNameField.frame.origin.y + firstNameField.frame.size.height + 40, width: containerView.frame.size.width - 64, height: 32)
         
         if passwordField == nil {
             passwordField = TextField()
@@ -83,9 +96,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             passwordField.isSecureTextEntry = true
             passwordField.placeholder = "Choose a password"
             passwordField.returnKeyType = .next
-            view.addSubview(passwordField)
+            containerView.addSubview(passwordField)
         }
-        passwordField.frame = CGRect(x: 32, y: emailField.frame.origin.y + emailField.frame.size.height + 40, width: view.frame.size.width - 64, height: 32)
+        passwordField.frame = CGRect(x: 32, y: emailField.frame.origin.y + emailField.frame.size.height + 40, width: containerView.frame.size.width - 64, height: 32)
         
         if zipcodeField == nil {
             zipcodeField = TextField()
@@ -93,16 +106,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             zipcodeField.keyboardType = .numberPad
             zipcodeField.placeholder = "Enter your zipcode"
             zipcodeField.returnKeyType = .next
-            view.addSubview(zipcodeField)
+            containerView.addSubview(zipcodeField)
         }
-        zipcodeField.frame = CGRect(x: 32, y: passwordField.frame.origin.y + passwordField.frame.size.height + 40, width: view.frame.size.width - 64, height: 32)
+        zipcodeField.frame = CGRect(x: 32, y: passwordField.frame.origin.y + passwordField.frame.size.height + 40, width: containerView.frame.size.width - 64, height: 32)
         
         if anonymousLabel == nil {
             anonymousLabel = UILabel()
             anonymousLabel.font = UIFont.systemFont(ofSize: 16)
             anonymousLabel.text = "Appear anonymous?"
             anonymousLabel.textColor = .black
-            view.addSubview(anonymousLabel)
+            containerView.addSubview(anonymousLabel)
         }
         anonymousLabel.sizeToFit()
         anonymousLabel.frame = CGRect(x: 32, y: zipcodeField.frame.origin.y + zipcodeField.frame.size.height + 32, width: anonymousLabel.frame.size.width, height: anonymousLabel.frame.size.height)
@@ -111,10 +124,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             anonymousSwitch = Switch()
             anonymousSwitch.isOn = true
             anonymousSwitch.switchSize = .medium
-            view.addSubview(anonymousSwitch)
+            containerView.addSubview(anonymousSwitch)
         }
         let anonymousSwitchSize = CGSize(width: 64, height: 48)
-        anonymousSwitch.frame = CGRect(x: view.frame.size.width - 32 - anonymousSwitchSize.width, y: anonymousLabel.frame.origin.y + (anonymousLabel.frame.size.height - anonymousSwitchSize.height) / 2, width: anonymousSwitchSize.width, height: anonymousSwitchSize.height)
+        anonymousSwitch.frame = CGRect(x: containerView.frame.size.width - 32 - anonymousSwitchSize.width, y: anonymousLabel.frame.origin.y + (anonymousLabel.frame.size.height - anonymousSwitchSize.height) / 2, width: anonymousSwitchSize.width, height: anonymousSwitchSize.height)
         
         if nextButton == nil {
             nextButton = RaisedButton()
@@ -124,9 +137,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             nextButton.title = "NEXT"
             nextButton.titleColor = .white
             nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightSemibold)
-            view.addSubview(nextButton)
+            containerView.addSubview(nextButton)
         }
-        nextButton.frame = CGRect(x: view.frame.size.width - 32 - 84, y: anonymousSwitch.frame.origin.y + anonymousSwitch.frame.size.height + 28, width: 84, height: 36)
+        nextButton.frame = CGRect(x: containerView.frame.size.width - 32 - 84, y: anonymousSwitch.frame.origin.y + anonymousSwitch.frame.size.height + 28, width: 84, height: 36)
+        
+        let containerHeight = (self.nextButton.frame.origin.y + self.nextButton.frame.height) - self.titleLabel.frame.origin.y
+        self.containerView.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.size.height + 32, width: self.view.frame.width, height: containerHeight)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -154,6 +170,56 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
             
             self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func activeTextField() -> UITextField? {
+        if firstNameField.isFirstResponder {
+            return firstNameField
+        }
+        
+        if lastNameField.isFirstResponder {
+            return lastNameField
+        }
+        
+        if emailField.isFirstResponder {
+            return emailField
+        }
+        
+        if passwordField.isFirstResponder {
+            return passwordField
+        }
+        
+        if zipcodeField.isFirstResponder {
+            return zipcodeField
+        }
+        
+        return nil
+    }
+    
+    @objc private func keyboardWillChangeFrame(_ notification: Notification) {
+        guard nextButton != nil, let keyboardHeight = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height, let textField = activeTextField() else {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.25) {
+            let screenHeight = self.view.frame.height - keyboardHeight
+            let textFieldY = (screenHeight - textField.frame.height) / 2
+            let containerY = textFieldY - textField.frame.origin.y
+            
+            let containerHeight = (self.nextButton.frame.origin.y + self.nextButton.frame.height) - self.titleLabel.frame.origin.y
+            self.containerView.frame = CGRect(x: 0, y: containerY, width: self.view.frame.width, height: containerHeight)
+        }
+    }
+    
+    @objc private func keyboardWillHide(_ notification: Notification) {
+        guard nextButton != nil else {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.25) {
+            let containerHeight = (self.nextButton.frame.origin.y + self.nextButton.frame.height) - self.titleLabel.frame.origin.y
+            self.containerView.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.size.height + 32, width: self.view.frame.width, height: containerHeight)
         }
     }
     
