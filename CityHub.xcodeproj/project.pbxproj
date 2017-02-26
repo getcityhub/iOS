@@ -11,6 +11,7 @@
 		752385C01E621FD90070AF9C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752385BF1E621FD80070AF9C /* Language.swift */; };
 		75997B701E63253C00B3EF45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B6F1E63253C00B3EF45 /* LoginViewController.swift */; };
 		75997B721E633FD500B3EF45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B711E633FD500B3EF45 /* RegisterViewController.swift */; };
+		75997B741E63597800B3EF45 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */; };
 		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
 		75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */; };
 		75BFF9E51E585187005FB84E /* PoliticiansRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */; };
@@ -50,6 +51,7 @@
 		752385BF1E621FD80070AF9C /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		75997B6F1E63253C00B3EF45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75997B711E633FD500B3EF45 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
 		75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRoutes.swift; sourceTree = "<group>"; };
 		75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticiansRoutes.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				EBCF2D581E465C9900DCB577 /* SelectTopicViewController.swift */,
 				75997B6F1E63253C00B3EF45 /* LoginViewController.swift */,
 				75997B711E633FD500B3EF45 /* RegisterViewController.swift */,
+				75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75997B741E63597800B3EF45 /* ForgotPasswordViewController.swift in Sources */,
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,

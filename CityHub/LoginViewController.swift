@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             emailField.autocorrectionType = .no
             emailField.delegate = self
             emailField.keyboardType = .emailAddress
-            emailField.placeholder = "Enter your email"
+            emailField.placeholder = "Enter your email address"
             emailField.returnKeyType = .next
             emailField.spellCheckingType = .no
             view.addSubview(emailField)
@@ -82,6 +82,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if forgotPasswordButton == nil {
             forgotPasswordButton = FlatButton()
+            forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonPressed), for: .touchUpInside)
             forgotPasswordButton.title = "Forgot password?"
             forgotPasswordButton.titleColor = Color.blue.base
             forgotPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
@@ -110,6 +111,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @objc private func closeButtonPressed(sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func forgotPasswordButtonPressed(sender: FlatButton) {
+        let fpvc = ForgotPasswordViewController()
+        present(fpvc, animated: true, completion: nil)
     }
     
     @objc private func registerButtonPressed(sender: FlatButton) {
