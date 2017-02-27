@@ -7,7 +7,7 @@
 //
 
 import AspectFillFaceAware
-import STXImageCache
+import SafariServices
 import UIKit
 
 class PoliticianCard: UITableViewCell {
@@ -187,7 +187,10 @@ class PoliticianCard: UITableViewCell {
             }
         case 3:
             if let website = politician.website {
-                url = URL(string: website)
+                if let url = URL(string: website) {
+                    let svc = SFSafariViewController(url: url)
+                    viewController?.present(svc, animated: true, completion: nil)
+                }
             }
         case 4:
             if let facebook = politician.facebook {
