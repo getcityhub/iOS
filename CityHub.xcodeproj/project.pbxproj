@@ -15,6 +15,10 @@
 		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
 		75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */; };
 		75BFF9E51E585187005FB84E /* PoliticiansRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */; };
+		75EE63EF1E6B952000A95EC9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EE63EE1E6B952000A95EC9 /* SettingsViewController.swift */; };
+		75EE63F11E6B95E500A95EC9 /* SettingsToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EE63F01E6B95E500A95EC9 /* SettingsToolbarController.swift */; };
+		75EE63F31E6B993800A95EC9 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EE63F21E6B993800A95EC9 /* SettingsHeaderView.swift */; };
+		75EE63F51E6B9AC100A95EC9 /* SettingsTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EE63F41E6B9AC100A95EC9 /* SettingsTextCell.swift */; };
 		EB1419B51E50CC2D0081FAFD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B41E50CC2D0081FAFD /* Category.swift */; };
 		EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */; };
 		EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1419BA1E50CE550081FAFD /* CityHubClient.swift */; };
@@ -55,6 +59,10 @@
 		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
 		75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRoutes.swift; sourceTree = "<group>"; };
 		75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticiansRoutes.swift; sourceTree = "<group>"; };
+		75EE63EE1E6B952000A95EC9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		75EE63F01E6B95E500A95EC9 /* SettingsToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsToolbarController.swift; sourceTree = "<group>"; };
+		75EE63F21E6B993800A95EC9 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		75EE63F41E6B9AC100A95EC9 /* SettingsTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTextCell.swift; sourceTree = "<group>"; };
 		9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.release.xcconfig"; sourceTree = "<group>"; };
 		EB1419B41E50CC2D0081FAFD /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EB1419B71E50CC650081FAFD /* CategoriesRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRoutes.swift; sourceTree = "<group>"; };
@@ -198,6 +206,8 @@
 				EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */,
 				EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */,
 				EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */,
+				75EE63F21E6B993800A95EC9 /* SettingsHeaderView.swift */,
+				75EE63F41E6B9AC100A95EC9 /* SettingsTextCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 				75997B6F1E63253C00B3EF45 /* LoginViewController.swift */,
 				75997B711E633FD500B3EF45 /* RegisterViewController.swift */,
 				75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */,
+				75EE63EE1E6B952000A95EC9 /* SettingsViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 				EB6A28D31E42AD820035AA8E /* CityHubToolbarController.swift */,
 				EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */,
 				EB73A2661E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift */,
+				75EE63F01E6B95E500A95EC9 /* SettingsToolbarController.swift */,
 			);
 			name = Material;
 			sourceTree = "<group>";
@@ -392,6 +404,8 @@
 			files = (
 				75997B741E63597800B3EF45 /* ForgotPasswordViewController.swift in Sources */,
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
+				75EE63F31E6B993800A95EC9 /* SettingsHeaderView.swift in Sources */,
+				75EE63EF1E6B952000A95EC9 /* SettingsViewController.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,
 				752385C01E621FD90070AF9C /* Language.swift in Sources */,
@@ -399,6 +413,8 @@
 				75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
+				75EE63F51E6B9AC100A95EC9 /* SettingsTextCell.swift in Sources */,
+				75EE63F11E6B95E500A95EC9 /* SettingsToolbarController.swift in Sources */,
 				EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */,
 				EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */,
 				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,

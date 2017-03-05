@@ -36,7 +36,8 @@ class CityHubToolbarController: ToolbarController {
     }
     
     @objc private func settingsButtonPressed(sender: IconButton) {
-        let lvc = LoginViewController()
-        present(lvc, animated: true, completion: nil)
+        let svc = SettingsViewController()
+        let stc = SettingsToolbarController(rootViewController: svc)
+        present(stc, animated: true, completion: nil)
     }
 }
