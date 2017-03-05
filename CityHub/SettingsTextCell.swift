@@ -8,31 +8,42 @@
 
 import UIKit
 
-class SettingsTextCell: UITableViewCell {
+class SettingsTextCell: SettingsCell {
     
-    private var container: UIView!
     private var label: UILabel!
+    private var secondaryLabel: UILabel!
+    
+    private var primaryText = ""
+    private var secondaryText = ""
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         backgroundColor = .clear
         
-        if container == nil {
-            container = UIView()
-            container.backgroundColor = .white
-            addSubview(container)
-        }
-        container.frame = CGRect(x: 12, y: 0, width: bounds.width - 24, height: bounds.height)
-        
         if label == nil {
             label = UILabel()
             label.font = UIFont.systemFont(ofSize: 14)
-            label.text = "Testing"
+            label.text = primaryText
             label.textColor = .black
-            addSubview(label)
+            container.addSubview(label)
         }
         label.sizeToFit()
-        label.frame = CGRect(x: 24, y: (bounds.height - label.frame.size.height) / 2, width: label.frame.size.width, height: label.frame.size.height)
+        label.frame = CGRect(x: 12, y: (container.frame.size.height - label.frame.size.height) / 2, width: label.frame.size.width, height: label.frame.size.height)
+        
+        if secondaryLabel == nil {
+            secondaryLabel = UILabel()
+            secondaryLabel.font = UIFont.systemFont(ofSize: 14)
+            secondaryLabel.text = secondaryText
+            secondaryLabel.textColor = UIColor(white: 131/255, alpha: 1)
+            container.addSubview(secondaryLabel)
+        }
+        secondaryLabel.sizeToFit()
+        secondaryLabel.frame = CGRect(x: container.frame.size.width - secondaryLabel.frame.size.width - 12, y: (container.frame.size.height - secondaryLabel.frame.size.height) / 2, width: secondaryLabel.frame.size.width, height: secondaryLabel.frame.size.height)
+    }
+    
+    func configure(_ primaryText: String, _ secondaryText: String) {
+        self.primaryText = primaryText
+        self.secondaryText = secondaryText
     }
 }

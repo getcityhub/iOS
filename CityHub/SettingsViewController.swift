@@ -24,16 +24,35 @@ class SettingsViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = SettingsTextCell()
-        return cell
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            let cell = SettingsTextCell()
+            cell.configure("Send Feedback", "")
+            return cell
+        case (0, 1):
+            let cell = SettingsTextCell()
+            
+            if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
+                let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String {
+                cell.configure("Version", "\(version) (\(build))")
+            } else {
+                cell.configure("Version", "?")
+            }
+            
+            return cell
+        default:
+            break
+        }
+        
+        return SettingsCell()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -41,7 +60,16 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return SettingsHeaderView()
+        let view = SettingsHeaderView()
+        
+        switch section {
+        case 0:
+            view.configure("About")
+        default:
+            break
+        }
+        
+        return view
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -56,5 +84,14 @@ class SettingsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 12
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            print("send feedback")
+        default:
+            break
+        }
     }
 }

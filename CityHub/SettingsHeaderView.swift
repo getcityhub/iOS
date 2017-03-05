@@ -13,6 +13,8 @@ class SettingsHeaderView: UIView {
     private var container: UIView!
     private var label: UILabel!
     
+    private var headerText = ""
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -28,11 +30,15 @@ class SettingsHeaderView: UIView {
         if label == nil {
             label = UILabel()
             label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightSemibold)
-            label.text = "PRIVACY"
+            label.text = headerText.localizedUppercase
             label.textColor = UIColor(white: 131/255, alpha: 1)
             addSubview(label)
         }
         label.sizeToFit()
         label.frame = CGRect(x: 24, y: bounds.height - label.frame.size.height - 6, width: label.frame.size.width, height: label.frame.size.height)
+    }
+    
+    func configure(_ headerText: String) {
+        self.headerText = headerText
     }
 }

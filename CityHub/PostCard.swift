@@ -29,6 +29,8 @@ class PostCard: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        backgroundColor = .clear
+        
         cardBackground.layer.cornerRadius = 2
         
         let shadowPath = UIBezierPath(rect: cardBackground.bounds)

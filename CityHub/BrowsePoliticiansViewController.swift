@@ -21,6 +21,7 @@ class BrowsePoliticiansViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.allowsSelection = false
+        tableView.backgroundColor = UIColor(white: 233/255, alpha: 1)
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         tableView.estimatedRowHeight = 104
         tableView.rowHeight = UITableViewAutomaticDimension

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
 		752385C01E621FD90070AF9C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752385BF1E621FD80070AF9C /* Language.swift */; };
+		7577BB2C1E6BA7F100455BF3 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577BB2B1E6BA7F100455BF3 /* SettingsCell.swift */; };
 		75997B701E63253C00B3EF45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B6F1E63253C00B3EF45 /* LoginViewController.swift */; };
 		75997B721E633FD500B3EF45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B711E633FD500B3EF45 /* RegisterViewController.swift */; };
 		75997B741E63597800B3EF45 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
 		752385BF1E621FD80070AF9C /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		7577BB2B1E6BA7F100455BF3 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		75997B6F1E63253C00B3EF45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75997B711E633FD500B3EF45 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				EBCF2D5A1E465D9B00DCB577 /* CollapsibleTopicHeader.swift */,
 				EBCF2D5C1E46B88800DCB577 /* PostCreationToolbar.swift */,
 				EB73A2601E47B3E80079CA13 /* PoliticianCard.swift */,
+				7577BB2B1E6BA7F100455BF3 /* SettingsCell.swift */,
 				75EE63F21E6B993800A95EC9 /* SettingsHeaderView.swift */,
 				75EE63F41E6B9AC100A95EC9 /* SettingsTextCell.swift */,
 			);
@@ -406,6 +409,7 @@
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				75EE63F31E6B993800A95EC9 /* SettingsHeaderView.swift in Sources */,
 				75EE63EF1E6B952000A95EC9 /* SettingsViewController.swift in Sources */,
+				7577BB2C1E6BA7F100455BF3 /* SettingsCell.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,
 				752385C01E621FD90070AF9C /* Language.swift in Sources */,

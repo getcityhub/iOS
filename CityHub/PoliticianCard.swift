@@ -28,6 +28,8 @@ class PoliticianCard: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        backgroundColor = .clear
+        
         guard politician != nil else {
             return
         }
