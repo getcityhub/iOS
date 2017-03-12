@@ -24,20 +24,28 @@ class SettingsViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        switch section {
+        case 0: return 1
+        case 1: return 2
+        default: return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
             let cell = SettingsTextCell()
+            cell.configure("Log In", "")
+            return cell
+        case (1, 0):
+            let cell = SettingsTextCell()
             cell.configure("Send Feedback", "")
             return cell
-        case (0, 1):
+        case (1, 1):
             let cell = SettingsTextCell()
             
             if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
@@ -64,6 +72,8 @@ class SettingsViewController: UITableViewController {
         
         switch section {
         case 0:
+            view.configure("Account")
+        case 1:
             view.configure("About")
         default:
             break
@@ -89,6 +99,9 @@ class SettingsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
+            let lvc = LoginViewController()
+            present(lvc, animated: true, completion: nil)
+        case (1, 0):
             print("send feedback")
         default:
             break

@@ -64,9 +64,9 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-Df-yZV">
                             <rect key="frame" x="409" y="88" width="43" height="43"/>
-                            <state key="normal" image="Favorite Border"/>
+                            <state key="normal" image="Like Border"/>
                             <connections>
-                                <action selector="favoriteButtonPressedWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="Gzd-y6-BFE"/>
+                                <action selector="likeButtonPressedWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="yLV-vh-SGu"/>
                             </connections>
                         </button>
                     </subviews>
@@ -108,7 +108,7 @@
                 <outlet property="cardBackground" destination="ZSV-m8-1Kx" id="TEU-iX-gWI"/>
                 <outlet property="contentLabel" destination="vVZ-XE-0gE" id="YR4-xK-0sM"/>
                 <outlet property="dateLabel" destination="mzW-7o-gXY" id="0Hx-hC-CKl"/>
-                <outlet property="favoriteButton" destination="Gdw-Df-yZV" id="9k7-YX-b4J"/>
+                <outlet property="likeButton" destination="Gdw-Df-yZV" id="oqS-tt-0cF"/>
                 <outlet property="moreButton" destination="x43-dj-DC7" id="nm8-3V-DDR"/>
                 <outlet property="titleLabel" destination="4hm-3H-a8s" id="U1A-Bg-vBE"/>
             </connections>
@@ -116,7 +116,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Favorite Border" width="24" height="24"/>
+        <image name="Like Border" width="24" height="24"/>
         <image name="More Vertical" width="24" height="24"/>
     </resources>
 </document>

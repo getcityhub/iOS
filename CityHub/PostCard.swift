@@ -18,9 +18,9 @@ class PostCard: UITableViewCell {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
     
-    private var favorited = false
+    private var liked = false
     private var firstRun = true
     private var post: Post?
     
@@ -43,7 +43,7 @@ class PostCard: UITableViewCell {
         
         if firstRun {
             moreButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
-            favoriteButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
+            likeButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
         }
         
         firstRun = false
@@ -52,6 +52,8 @@ class PostCard: UITableViewCell {
     // MARK: Public Methods
     
     func configure(_ post: Post) {
+        self.post = post
+        
         titleLabel.text = post.title
         authorLabel.text = "by".localized + (post.author.anonymous ? "Anonymous".localized : "\(post.author.firstName) \(post.author.lastName)")
         contentLabel.text = post.text
@@ -83,15 +85,23 @@ class PostCard: UITableViewCell {
         viewController?.present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func favoriteButtonPressed(sender: UIButton) {
-        favorited = !favorited
+    @IBAction func likeButtonPressed(sender: UIButton) {
+        guard let post = post else {
+            return
+        }
         
-        if favorited {
-            favoriteButton.setImage(#imageLiteral(resourceName: "Favorite"), for: .normal)
-            favoriteButton.tintColor = UIColor(red: 244/255, green: 67/255, blue: 54/255, alpha: 1)
+        liked = !liked
+        
+        if liked {
+            likeButton.setImage(#imageLiteral(resourceName: "Like"), for: .normal)
+            likeButton.tintColor = UIColor(red: 244/255, green: 67/255, blue: 54/255, alpha: 1)
+            
+            CityHubClient.shared.posts.likePost(postId: post.id, completion: nil)
         } else {
-            favoriteButton.setImage(#imageLiteral(resourceName: "Favorite Border"), for: .normal)
-            favoriteButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
+            likeButton.setImage(#imageLiteral(resourceName: "Like Border"), for: .normal)
+            likeButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
+            
+            CityHubClient.shared.posts.unlikePost(postId: post.id, completion: nil)
         }
     }
 }

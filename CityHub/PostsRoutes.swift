@@ -61,4 +61,16 @@ class PostsRoutes {
             completion?(retrievedPosts, error)
         }
     }
+    
+    func likePost(postId: Int, completion: ((_ error: CityHubRequestError?) -> Void)?) {
+        CityHubRequest.request("/posts/\(postId)/like", requestType: "POST") { json, error in
+            completion?(error)
+        }
+    }
+    
+    func unlikePost(postId: Int, completion: ((_ error: CityHubRequestError?) -> Void)?) {
+        CityHubRequest.request("/posts/\(postId)/unlike", requestType: "POST") { json, error in
+            completion?(error)
+        }
+    }
 }
