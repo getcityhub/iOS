@@ -34,9 +34,9 @@ class SearchToolbarController: ToolbarController, SearchBarDelegate {
         searchBar.textColor = .white
         searchBar.leftViews = [closeButton]
         
-        statusBar.backgroundColor = Color.blue.darken3
+        statusBar.backgroundColor = Constants.darkerRedColor
         
-        toolbar.backgroundColor = Color.blue.darken2
+        toolbar.backgroundColor = Constants.primaryRedColor
         toolbar.centerViews = [searchBar]
     }
     

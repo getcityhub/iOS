@@ -122,8 +122,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         if anonymousSwitch == nil {
             anonymousSwitch = Switch()
+            anonymousSwitch.buttonOnColor = Constants.primaryRedColor
             anonymousSwitch.isOn = true
             anonymousSwitch.switchSize = .medium
+            anonymousSwitch.trackOnColor = Constants.whiterRedColor
             containerView.addSubview(anonymousSwitch)
         }
         let anonymousSwitchSize = CGSize(width: 64, height: 48)
@@ -132,7 +134,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if nextButton == nil {
             nextButton = RaisedButton()
             nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
-            nextButton.backgroundColor = Color.blue.base
+            nextButton.backgroundColor = Constants.primaryRedColor
             nextButton.pulseColor = .white
             nextButton.title = "NEXT".localized
             nextButton.titleColor = .white

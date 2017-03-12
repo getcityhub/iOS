@@ -15,6 +15,7 @@
 		75997B701E63253C00B3EF45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B6F1E63253C00B3EF45 /* LoginViewController.swift */; };
 		75997B721E633FD500B3EF45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B711E633FD500B3EF45 /* RegisterViewController.swift */; };
 		75997B741E63597800B3EF45 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */; };
+		75A5BF891E75DD5000FD4D3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5BF881E75DD5000FD4D3F /* Constants.swift */; };
 		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
 		75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */; };
 		75BFF9E51E585187005FB84E /* PoliticiansRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */; };
@@ -62,6 +63,7 @@
 		75997B6F1E63253C00B3EF45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75997B711E633FD500B3EF45 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		75A5BF881E75DD5000FD4D3F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
 		75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRoutes.swift; sourceTree = "<group>"; };
 		75BFF9E41E585187005FB84E /* PoliticiansRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticiansRoutes.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				EBDE7BF31E43A4E5007057C8 /* UIView+ViewController.swift */,
 				EB781E0D1E3FB91C00B7F0A4 /* AppDelegate.swift */,
 				EB1419D41E50FF080081FAFD /* String+Localized.swift */,
+				75A5BF881E75DD5000FD4D3F /* Constants.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
 				75EE63F51E6B9AC100A95EC9 /* SettingsTextCell.swift in Sources */,
 				75EE63F11E6B95E500A95EC9 /* SettingsToolbarController.swift in Sources */,
+				75A5BF891E75DD5000FD4D3F /* Constants.swift in Sources */,
 				EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */,
 				EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */,
 				755F6C8A1E74B64F00F70197 /* SearchToolbarController.swift in Sources */,

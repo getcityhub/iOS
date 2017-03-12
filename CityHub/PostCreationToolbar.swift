@@ -51,7 +51,7 @@ class PostCreationToolbar: UIView {
         if postButton == nil {
             postButton = RaisedButton(title: "Post", titleColor: .white)
             postButton.addTarget(self, action: #selector(postButtonPressed), for: .touchUpInside)
-            postButton.backgroundColor = Color.blue.base
+            postButton.backgroundColor = Constants.primaryRedColor
             postButton.pulseColor = .white
             addSubview(postButton)
         }

@@ -29,10 +29,9 @@ class CityHubToolbarController: ToolbarController {
         searchButton.addTarget(self, action: #selector(searchButtonPressed), for: .touchUpInside)
         searchButton.pulseColor = .white
         
-        statusBarStyle = .lightContent
-        statusBar.backgroundColor = Color.blue.darken3
+        statusBar.backgroundColor = Constants.darkerRedColor
         
-        toolbar.backgroundColor = Color.blue.darken2
+        toolbar.backgroundColor = Constants.primaryRedColor
         toolbar.rightViews = [settingsButton, searchButton]
     }
     

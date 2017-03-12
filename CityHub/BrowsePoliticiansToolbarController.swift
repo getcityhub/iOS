@@ -24,10 +24,9 @@ class BrowsePoliticiansToolbarController: ToolbarController {
         closeButton.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
         closeButton.pulseColor = .white
         
-        statusBarStyle = .lightContent
-        statusBar.backgroundColor = Color.blue.darken3
+        statusBar.backgroundColor = Constants.darkerRedColor
         
-        toolbar.backgroundColor = Color.blue.darken2
+        toolbar.backgroundColor = Constants.primaryRedColor
         toolbar.leftViews = [closeButton]
         toolbar.title = "Politicians".localized
         toolbar.titleLabel.textAlignment = .left

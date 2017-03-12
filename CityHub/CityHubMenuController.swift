@@ -28,7 +28,7 @@ class CityHubMenuController: MenuController, MenuDelegate {
         
         let addButton = FabButton(image: #imageLiteral(resourceName: "Add").withRenderingMode(.alwaysTemplate), tintColor: .white)
         addButton.pulseColor = .white
-        addButton.backgroundColor = Color.red.base
+        addButton.backgroundColor = Constants.primaryRedColor
         addButton.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
         
         let postButton = MenuItem()

@@ -71,7 +71,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if nextButton == nil {
             nextButton = RaisedButton()
             nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
-            nextButton.backgroundColor = Color.blue.base
+            nextButton.backgroundColor = Constants.primaryRedColor
             nextButton.pulseColor = .white
             nextButton.title = "NEXT".localized
             nextButton.titleColor = .white
@@ -84,7 +84,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             forgotPasswordButton = FlatButton()
             forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonPressed), for: .touchUpInside)
             forgotPasswordButton.title = "Forgot password?".localized
-            forgotPasswordButton.titleColor = Color.blue.base
+            forgotPasswordButton.titleColor = Constants.primaryRedColor
             forgotPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             view.addSubview(forgotPasswordButton)
         }
@@ -93,7 +93,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             registerButton = FlatButton()
             registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
             registerButton.title = "Create account".localized
-            registerButton.titleColor = Color.blue.base
+            registerButton.titleColor = Constants.primaryRedColor
             registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             view.addSubview(registerButton)
         }

@@ -25,9 +25,9 @@ class SelectTopicToolbarController: ToolbarController {
         closeButton.pulseColor = .white
         
         statusBarStyle = .lightContent
-        statusBar.backgroundColor = Color.blue.darken3
+        statusBar.backgroundColor = Constants.darkerRedColor
         
-        toolbar.backgroundColor = Color.blue.darken2
+        toolbar.backgroundColor = Constants.primaryRedColor
         toolbar.leftViews = [closeButton]
         toolbar.title = "Select a Topic".localized
         toolbar.titleLabel.textAlignment = .left

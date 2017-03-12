@@ -39,20 +39,20 @@ class SettingsViewController: UITableViewController {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
             let cell = SettingsTextCell()
-            cell.configure("Log In", "")
+            cell.configure("Log In".localized, "")
             return cell
         case (1, 0):
             let cell = SettingsTextCell()
-            cell.configure("Send Feedback", "")
+            cell.configure("Send Feedback".localized, "")
             return cell
         case (1, 1):
             let cell = SettingsTextCell()
             
             if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
                 let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String {
-                cell.configure("Version", "\(version) (\(build))")
+                cell.configure("Version".localized, "\(version) (\(build))")
             } else {
-                cell.configure("Version", "?")
+                cell.configure("Version".localized, "?")
             }
             
             return cell
@@ -72,9 +72,9 @@ class SettingsViewController: UITableViewController {
         
         switch section {
         case 0:
-            view.configure("Account")
+            view.configure("Your Account".localized)
         case 1:
-            view.configure("About")
+            view.configure("About".localized)
         default:
             break
         }

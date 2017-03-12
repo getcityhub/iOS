@@ -57,7 +57,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         if nextButton == nil {
             nextButton = RaisedButton()
             nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
-            nextButton.backgroundColor = Color.blue.base
+            nextButton.backgroundColor = Constants.primaryRedColor
             nextButton.pulseColor = .white
             nextButton.title = "NEXT".localized
             nextButton.titleColor = .white
