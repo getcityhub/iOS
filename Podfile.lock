@@ -1,8 +1,8 @@
 PODS:
   - AspectFillFaceAware (1.0.0)
-  - Material (2.5.2):
-    - Material/Core (= 2.5.2)
-  - Material/Core (2.5.2)
+  - Material (2.4.19):
+    - Material/Core (= 2.4.19)
+  - Material/Core (2.4.19)
   - Motion (1.0.5):
     - Motion/Core (= 1.0.5)
   - Motion/Core (1.0.5)
@@ -11,18 +11,18 @@ PODS:
 
 DEPENDENCIES:
   - AspectFillFaceAware (~> 1.0)
-  - Material (~> 2.5)
-  - Motion (~> 1.0)
+  - Material (= 2.4.19)
+  - Motion (= 1.0.5)
   - SVProgressHUD (~> 2.1)
   - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
   AspectFillFaceAware: 9923f5ded5c1c915692f98ba62bf22c0a2fa2b9e
-  Material: 00ae261fa04dd3f3f8584d07e44ac658fa1bc6fd
+  Material: 67b52869f68ab95757e14801ffba0a52a4f19c31
   Motion: 35d2c694cb62b0325c62504e15ffdf3cc3cc7d39
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: dbc4c9f995e440afd6d04bf1ef1a8ea21cf008c6
+PODFILE CHECKSUM: 75075b1e10a0872711c528611df61a6ee6449b27
 
 COCOAPODS: 1.2.0

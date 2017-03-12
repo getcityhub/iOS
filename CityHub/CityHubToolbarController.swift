@@ -26,6 +26,7 @@ class CityHubToolbarController: ToolbarController {
         settingsButton.pulseColor = .white
         
         searchButton = IconButton(image: #imageLiteral(resourceName: "Search").withRenderingMode(.alwaysTemplate), tintColor: .white)
+        searchButton.addTarget(self, action: #selector(searchButtonPressed), for: .touchUpInside)
         searchButton.pulseColor = .white
         
         statusBarStyle = .lightContent
@@ -38,6 +39,12 @@ class CityHubToolbarController: ToolbarController {
     @objc private func settingsButtonPressed(sender: IconButton) {
         let svc = SettingsViewController()
         let stc = SettingsToolbarController(rootViewController: svc)
+        present(stc, animated: true, completion: nil)
+    }
+    
+    @objc private func searchButtonPressed(sender: IconButton) {
+        let svc = SearchViewController()
+        let stc = SearchToolbarController(rootViewController: svc)
         present(stc, animated: true, completion: nil)
     }
 }

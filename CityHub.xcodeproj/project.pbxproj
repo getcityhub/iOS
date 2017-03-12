@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18580B6B6EC5633D03D0F037 /* Pods_CityHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B83F460015C4DCC0B1813 /* Pods_CityHub.framework */; };
 		752385C01E621FD90070AF9C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752385BF1E621FD80070AF9C /* Language.swift */; };
+		755F6C881E74B5A200F70197 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755F6C871E74B5A200F70197 /* SearchViewController.swift */; };
+		755F6C8A1E74B64F00F70197 /* SearchToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755F6C891E74B64F00F70197 /* SearchToolbarController.swift */; };
 		7577BB2C1E6BA7F100455BF3 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577BB2B1E6BA7F100455BF3 /* SettingsCell.swift */; };
 		75997B701E63253C00B3EF45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B6F1E63253C00B3EF45 /* LoginViewController.swift */; };
 		75997B721E633FD500B3EF45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B711E633FD500B3EF45 /* RegisterViewController.swift */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityHub/Pods-CityHub.debug.xcconfig"; sourceTree = "<group>"; };
 		752385BF1E621FD80070AF9C /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		755F6C871E74B5A200F70197 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		755F6C891E74B64F00F70197 /* SearchToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchToolbarController.swift; sourceTree = "<group>"; };
 		7577BB2B1E6BA7F100455BF3 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		75997B6F1E63253C00B3EF45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75997B711E633FD500B3EF45 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				75997B711E633FD500B3EF45 /* RegisterViewController.swift */,
 				75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */,
 				75EE63EE1E6B952000A95EC9 /* SettingsViewController.swift */,
+				755F6C871E74B5A200F70197 /* SearchViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				EBCF2D5E1E46C04F00DCB577 /* SelectTopicToolbarController.swift */,
 				EB73A2661E47C4CE0079CA13 /* BrowsePoliticiansToolbarController.swift */,
 				75EE63F01E6B95E500A95EC9 /* SettingsToolbarController.swift */,
+				755F6C891E74B64F00F70197 /* SearchToolbarController.swift */,
 			);
 			name = Material;
 			sourceTree = "<group>";
@@ -311,7 +317,7 @@
 				TargetAttributes = {
 					EB781E091E3FB91C00B7F0A4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 59PUM5CV3T;
+						DevelopmentTeam = JDJKS788L2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -409,6 +415,7 @@
 				EB8469821E3FC32E00A97F8D /* PostCard.swift in Sources */,
 				75EE63F31E6B993800A95EC9 /* SettingsHeaderView.swift in Sources */,
 				75EE63EF1E6B952000A95EC9 /* SettingsViewController.swift in Sources */,
+				755F6C881E74B5A200F70197 /* SearchViewController.swift in Sources */,
 				7577BB2C1E6BA7F100455BF3 /* SettingsCell.swift in Sources */,
 				EB8469801E3FBD3200A97F8D /* BrowsePostsViewController.swift in Sources */,
 				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,
@@ -421,6 +428,7 @@
 				75EE63F11E6B95E500A95EC9 /* SettingsToolbarController.swift in Sources */,
 				EB1419BF1E50E3590081FAFD /* Date+CityHub.swift in Sources */,
 				EB1419BB1E50CE550081FAFD /* CityHubClient.swift in Sources */,
+				755F6C8A1E74B64F00F70197 /* SearchToolbarController.swift in Sources */,
 				EB95064D1E443A5300F8A745 /* CityHubRequest.swift in Sources */,
 				EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */,
 				EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */,
@@ -573,7 +581,7 @@
 			baseConfigurationReference = 32E7C6656504C6AB22ADB302 /* Pods-CityHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 59PUM5CV3T;
+				DEVELOPMENT_TEAM = JDJKS788L2;
 				INFOPLIST_FILE = CityHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -588,7 +596,7 @@
 			baseConfigurationReference = 9A1CBBB3222009474075ADEE /* Pods-CityHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 59PUM5CV3T;
+				DEVELOPMENT_TEAM = JDJKS788L2;
 				INFOPLIST_FILE = CityHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
