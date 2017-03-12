@@ -36,4 +36,30 @@
 
 "Select a Topic" = "Elegir un Tema";
 
-"Anonymous" = "";
+"Anonymous" = "Anónimo";
+
+"Sign in" = "Iniciar sesión";
+
+"Enter your email address" = "Anotar su correo electronico";
+
+"Enter your password" = "Anotar su contraseña";
+
+"Forgot password?" = "¿Has olvidé la contraseña?";
+
+"Forgot password" = "He olvidado la contraseña";
+
+"Create account" = "Crear cuenta";
+
+"NEXT" = "SIGUIENTE";
+
+"Register" = "Registrar";
+
+"First name" = "Nombre";
+
+"Last name" = "Apellido";
+
+"Choose a password" = "Escoger una contraseña";
+
+"Enter your zipcode" = "Entrar su código postal";
+
+"Appear anonymous?" = "¿Aparece anónimo?";

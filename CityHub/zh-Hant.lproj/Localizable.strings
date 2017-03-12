@@ -36,4 +36,30 @@
 
 "Select a Topic" = "選擇話題";
 
-"Anonymous" = "匿名者";
+"Anonymous" = "匿名";
+
+"Sign in" = "登錄";
+
+"Enter your email address" = "輸入您的Email";
+
+"Enter your password" = "輸入您的密碼";
+
+"Forgot password?" = "忘記密碼？";
+
+"Forgot password" = "忘記密碼";
+
+"Create account" = "創建賬戶";
+
+"NEXT" = "下一步";
+
+"Register" = "註冊";
+
+"First name" = "名";
+
+"Last name" = "姓";
+
+"Choose a password" = "選擇密碼";
+
+"Enter your zipcode" = "輸入您的郵編";
+
+"Appear anonymous?" = "選擇匿名？";

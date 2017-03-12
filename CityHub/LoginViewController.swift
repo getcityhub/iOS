@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if titleLabel == nil {
             titleLabel = UILabel()
             titleLabel.font = UIFont.systemFont(ofSize: 28, weight: UIFontWeightSemibold)
-            titleLabel.text = "Sign in"
+            titleLabel.text = "Sign in".localized
             titleLabel.textColor = .black
             view.addSubview(titleLabel)
         }
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             emailField.autocorrectionType = .no
             emailField.delegate = self
             emailField.keyboardType = .emailAddress
-            emailField.placeholder = "Enter your email address"
+            emailField.placeholder = "Enter your email address".localized
             emailField.returnKeyType = .next
             emailField.spellCheckingType = .no
             view.addSubview(emailField)
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordField = TextField()
             passwordField.delegate = self
             passwordField.isSecureTextEntry = true
-            passwordField.placeholder = "Enter your password"
+            passwordField.placeholder = "Enter your password".localized
             passwordField.returnKeyType = .done
             view.addSubview(passwordField)
         }
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
             nextButton.backgroundColor = Color.blue.base
             nextButton.pulseColor = .white
-            nextButton.title = "NEXT"
+            nextButton.title = "NEXT".localized
             nextButton.titleColor = .white
             nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightSemibold)
             view.addSubview(nextButton)
@@ -83,7 +83,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if forgotPasswordButton == nil {
             forgotPasswordButton = FlatButton()
             forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonPressed), for: .touchUpInside)
-            forgotPasswordButton.title = "Forgot password?"
+            forgotPasswordButton.title = "Forgot password?".localized
             forgotPasswordButton.titleColor = Color.blue.base
             forgotPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             view.addSubview(forgotPasswordButton)
@@ -92,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if registerButton == nil {
             registerButton = FlatButton()
             registerButton.addTarget(self, action: #selector(registerButtonPressed), for: .touchUpInside)
-            registerButton.title = "Create account"
+            registerButton.title = "Create account".localized
             registerButton.titleColor = Color.blue.base
             registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             view.addSubview(registerButton)

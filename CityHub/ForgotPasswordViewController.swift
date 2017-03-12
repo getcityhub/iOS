@@ -25,7 +25,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         if titleLabel == nil {
             titleLabel = UILabel()
             titleLabel.font = UIFont.systemFont(ofSize: 28, weight: UIFontWeightSemibold)
-            titleLabel.text = "Forgot password"
+            titleLabel.text = "Forgot password".localized
             titleLabel.textColor = .black
             view.addSubview(titleLabel)
         }
@@ -47,7 +47,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             emailField.autocorrectionType = .no
             emailField.delegate = self
             emailField.keyboardType = .emailAddress
-            emailField.placeholder = "Enter your email address"
+            emailField.placeholder = "Enter your email address".localized
             emailField.returnKeyType = .done
             emailField.spellCheckingType = .no
             view.addSubview(emailField)
@@ -59,7 +59,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
             nextButton.backgroundColor = Color.blue.base
             nextButton.pulseColor = .white
-            nextButton.title = "NEXT"
+            nextButton.title = "NEXT".localized
             nextButton.titleColor = .white
             nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightSemibold)
             view.addSubview(nextButton)

@@ -36,4 +36,30 @@
 
 "Select a Topic" = "选择话题";
 
-"Anonymous" = "匿名者";
+"Anonymous" = "匿名";
+
+"Sign in" = "登录";
+
+"Enter your email address" = "输入您的Email";
+
+"Enter your password" = "输入您的密码";
+
+"Forgot password?" = "忘记密码？";
+
+"Forgot password" = "忘记密码";
+
+"Create account" = "创建账户";
+
+"NEXT" = "下一步";
+
+"Register" = "注册";
+
+"First name" = "名";
+
+"Last name" = "姓";
+
+"Choose a password" = "选择密码";
+
+"Enter your zipcode" = "输入您的邮编";
+
+"Appear anonymous?" = "选择匿名？";

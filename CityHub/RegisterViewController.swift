@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if titleLabel == nil {
             titleLabel = UILabel()
             titleLabel.font = UIFont.systemFont(ofSize: 28, weight: UIFontWeightSemibold)
-            titleLabel.text = "Register"
+            titleLabel.text = "Register".localized
             titleLabel.textColor = .black
             containerView.addSubview(titleLabel)
         }
@@ -63,7 +63,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if firstNameField == nil {
             firstNameField = TextField()
             firstNameField.delegate = self
-            firstNameField.placeholder = "First name"
+            firstNameField.placeholder = "First name".localized
             firstNameField.returnKeyType = .next
             containerView.addSubview(firstNameField)
         }
@@ -72,7 +72,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if lastNameField == nil {
             lastNameField = TextField()
             lastNameField.delegate = self
-            lastNameField.placeholder = "Last name"
+            lastNameField.placeholder = "Last name".localized
             lastNameField.returnKeyType = .next
             containerView.addSubview(lastNameField)
         }
@@ -84,7 +84,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             emailField.autocorrectionType = .no
             emailField.delegate = self
             emailField.keyboardType = .emailAddress
-            emailField.placeholder = "Enter your email address"
+            emailField.placeholder = "Enter your email address".localized
             emailField.returnKeyType = .next
             containerView.addSubview(emailField)
         }
@@ -94,7 +94,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             passwordField = TextField()
             passwordField.delegate = self
             passwordField.isSecureTextEntry = true
-            passwordField.placeholder = "Choose a password"
+            passwordField.placeholder = "Choose a password".localized
             passwordField.returnKeyType = .next
             containerView.addSubview(passwordField)
         }
@@ -104,7 +104,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             zipcodeField = TextField()
             zipcodeField.delegate = self
             zipcodeField.keyboardType = .numberPad
-            zipcodeField.placeholder = "Enter your zipcode"
+            zipcodeField.placeholder = "Enter your zipcode".localized
             zipcodeField.returnKeyType = .next
             containerView.addSubview(zipcodeField)
         }
@@ -113,7 +113,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if anonymousLabel == nil {
             anonymousLabel = UILabel()
             anonymousLabel.font = UIFont.systemFont(ofSize: 16)
-            anonymousLabel.text = "Appear anonymous?"
+            anonymousLabel.text = "Appear anonymous?".localized
             anonymousLabel.textColor = .black
             containerView.addSubview(anonymousLabel)
         }
@@ -134,7 +134,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
             nextButton.backgroundColor = Color.blue.base
             nextButton.pulseColor = .white
-            nextButton.title = "NEXT"
+            nextButton.title = "NEXT".localized
             nextButton.titleColor = .white
             nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFontWeightSemibold)
             containerView.addSubview(nextButton)
