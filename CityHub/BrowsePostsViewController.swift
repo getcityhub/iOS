@@ -71,6 +71,8 @@ class BrowsePostsViewController: UITableViewController {
                 return
             }
             
+            self.posts = posts
+            
             DispatchQueue.main.async {
                 if posts.count == 0 {
                     self.errorLabel.alpha = 1
@@ -81,11 +83,7 @@ class BrowsePostsViewController: UITableViewController {
                 
                 self.view.setNeedsLayout()
                 self.view.layoutIfNeeded()
-            }
-            
-            self.posts = posts
-            
-            DispatchQueue.main.async {
+                
                 self.tableView.reloadData()
             }
         }
