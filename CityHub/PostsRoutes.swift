@@ -17,7 +17,7 @@ class PostsRoutes {
             "categoryId": categoryId,
             "language": language,
             "text": text
-        ] as [String : Any]
+        ] as [String: Any]
         
         CityHubRequest.request("/posts", requestType: "POST", body: body) { json, error in
             guard let json = json else {
@@ -30,8 +30,14 @@ class PostsRoutes {
         }
     }
     
-    func getPosts(completion: ((_ posts: [Post]?, _ error: CityHubRequestError?) -> Void)?) {
-        CityHubRequest.request("/posts") { json, error in
+    func getPosts(query: String? = nil, completion: ((_ posts: [Post]?, _ error: CityHubRequestError?) -> Void)?) {
+        var params = [String: String]()
+        
+        if let query = query {
+            params["q"] = query
+        }
+        
+        CityHubRequest.request("/posts", params: params) { json, error in
             guard let posts = json?.array else {
                 completion?(nil, error)
                 return

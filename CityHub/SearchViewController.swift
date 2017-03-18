@@ -88,7 +88,7 @@ class SearchViewController: UITableViewController, SearchToolbarControllerDelega
     func searchBarTextUpdated(text: String) {
         activityIndicator.startAnimating()
         
-        CityHubClient.shared.posts.getPosts { posts, error in
+        CityHubClient.shared.posts.getPosts(query: text) { posts, error in
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }
