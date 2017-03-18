@@ -54,7 +54,7 @@ class BrowsePostsViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        CityHubClient.shared.posts.getPosts(categoryId: nil, language: nil, zipcode: nil) { posts, error in
+        CityHubClient.shared.posts.getPosts { posts, error in
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }

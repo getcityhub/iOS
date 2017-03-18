@@ -14,7 +14,7 @@ class SearchToolbarController: ToolbarController, SearchBarDelegate {
     var searchDelegate: SearchToolbarControllerDelegate?
     
     private var closeButton: IconButton!
-    private var searchBar: SearchBar!
+    var searchBar: SearchBar!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -29,7 +29,9 @@ class SearchToolbarController: ToolbarController, SearchBarDelegate {
         
         searchBar = SearchBar()
         searchBar.backgroundColor = .clear
+        searchBar.clearButton.addTarget(self, action: #selector(clearButtonPressed), for: .touchUpInside)
         searchBar.clearButton.tintColor = UIColor(red: 207/255, green: 216/255, blue: 220/255, alpha: 1)
+        searchBar.delegate = self
         searchBar.placeholderColor = UIColor(red: 207/255, green: 216/255, blue: 220/255, alpha: 1)
         searchBar.textColor = .white
         searchBar.leftViews = [closeButton]
@@ -42,6 +44,10 @@ class SearchToolbarController: ToolbarController, SearchBarDelegate {
     
     @objc private func closeButtonPressed(sender: IconButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func clearButtonPressed(sender: IconButton) {
+        searchDelegate?.searchBarTextUpdated(text: searchBar.textField.text ?? "")
     }
     
     func searchBar(searchBar: SearchBar, didChange textField: UITextField, with text: String?) {

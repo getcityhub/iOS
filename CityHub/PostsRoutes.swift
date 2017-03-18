@@ -30,22 +30,8 @@ class PostsRoutes {
         }
     }
     
-    func getPosts(categoryId: Int?, language: String?, zipcode: String?, completion: ((_ posts: [Post]?, _ error: CityHubRequestError?) -> Void)?) {
-        var params = [String: String]()
-        
-        if let categoryId = categoryId {
-            params["cid"] = "\(categoryId)"
-        }
-        
-        if let language = language {
-            params["lang"] = language
-        }
-        
-        if let zipcode = zipcode {
-            params["zip"] = zipcode
-        }
-        
-        CityHubRequest.request("/posts", params: params) { json, error in
+    func getPosts(completion: ((_ posts: [Post]?, _ error: CityHubRequestError?) -> Void)?) {
+        CityHubRequest.request("/posts") { json, error in
             guard let posts = json?.array else {
                 completion?(nil, error)
                 return
