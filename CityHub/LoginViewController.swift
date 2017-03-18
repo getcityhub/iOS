@@ -127,12 +127,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         SVProgressHUD.show()
         
         CityHubClient.shared.users.login(email: emailField.text ?? "", password: passwordField.text ?? "") { user, error in
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
+            guard let _ = user, error == nil else {
+                DispatchQueue.main.async {
+                    SVProgressHUD.showError(withStatus: error?.getUserMessage() ?? "An unknown error occurred".localized)
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    SVProgressHUD.dismiss()
+                }
+                
+                return
             }
             
-            guard let _ = user, error == nil else {
-                return
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
             }
             
             self.dismiss(animated: true, completion: nil)

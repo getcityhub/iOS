@@ -162,13 +162,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @objc private func nextButtonPressed(sender: UIButton) {
         SVProgressHUD.show()
         
-        CityHubClient.shared.users.register(firstName: firstNameField.text ?? "", lastName: lastNameField.text ?? "", anonymous: anonymousSwitch.isOn, zipcode: zipcodeField.text ?? "", languages: ["en-US"], email: emailField.text ?? "") { user, error in
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
+        CityHubClient.shared.users.register(firstName: firstNameField.text ?? "", lastName: lastNameField.text ?? "", anonymous: anonymousSwitch.isOn, zipcode: zipcodeField.text ?? "", languages: ["en-US"], email: emailField.text ?? "", password: passwordField.text ?? "") { user, error in
+            guard let _ = user, error == nil else {
+                DispatchQueue.main.async {
+                    SVProgressHUD.showError(withStatus: error?.getUserMessage() ?? "An unknown error occurred".localized)
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    SVProgressHUD.dismiss()
+                }
+                
+                return
             }
             
-            guard let _ = user, error == nil else {
-                return
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
             }
             
             self.dismiss(animated: true, completion: nil)

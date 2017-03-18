@@ -40,7 +40,7 @@ class CityHubRequest {
                 request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
                 request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
             } catch {
-                completion?(nil, .badRequest(data: nil))
+                completion?(nil, .badRequest(message: "An unknown error occurred"))
                 return
             }
         }
@@ -69,7 +69,34 @@ class CityHubRequest {
                 completion?(nil, requestError)
             } else if response.statusCode != 200 && response.statusCode != 204 {
                 switch response.statusCode {
-                case 400: requestError = .badRequest(data: json)
+                case 400:
+                    if let message = json["message"].string {
+                        if message == "First name must be at least two characters long." {
+                            requestError = .shortFirstName
+                        } else if message == "First name must be at most 20 characters long." {
+                            requestError = .longFirstName
+                        } else if message == "First name must only have letters." {
+                            requestError = .invalidFirstName
+                        } else if message == "Last name must be at least two characters long." {
+                            requestError = .shortLastName
+                        } else if message == "Last name must be at most 20 characters long." {
+                            requestError = .longLastName
+                        } else if message == "Last name must only have letters." {
+                            requestError = .invalidLastName
+                        } else if message == "Zipcode must be a valid NYC zipcode." {
+                            requestError = .invalidZipcode
+                        } else if message.contains("Password is too weak.") {
+                            requestError = .weakPassword
+                        } else if message == "Email address is invalid." {
+                            requestError = .invalidEmail
+                        } else if message == "Email address has already been registered." {
+                            requestError = .usedEmail
+                        } else {
+                            requestError = .badRequest(message: message)
+                        }
+                    } else {
+                        requestError = .badRequest(message: json["message"].string ?? "An unknown error occurred.")
+                    }
                 case 401: requestError = .unauthorized
                 case 403: requestError = .accessDenied
                 case 404: requestError = .notFound

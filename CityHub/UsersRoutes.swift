@@ -27,14 +27,15 @@ class UsersRoutes {
         }
     }
     
-    func register(firstName: String, lastName: String, anonymous: Bool, zipcode: String, languages: [String], email: String, completion: ((_ user: User?, _ error: CityHubRequestError?) -> Void)?) {
+    func register(firstName: String, lastName: String, anonymous: Bool, zipcode: String, languages: [String], email: String, password: String, completion: ((_ user: User?, _ error: CityHubRequestError?) -> Void)?) {
         let body = [
             "firstName": firstName,
             "lastName": lastName,
             "anonymous": anonymous,
             "zipcode": zipcode,
             "languages": languages,
-            "email": email
+            "email": email,
+            "password": password
         ] as [String: Any]
         
         CityHubRequest.request("/users", requestType: "POST", body: body) { json, error in
