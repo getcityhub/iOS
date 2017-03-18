@@ -13,6 +13,9 @@ class BrowsePostsViewController: UITableViewController {
     
     // MARK: Properties
     
+    private var activityIndicator: UIActivityIndicatorView!
+    private var errorLabel: UILabel!
+    
     private var postCells = [IndexPath: PostCard]()
     private var posts = [Post]()
     
@@ -34,14 +37,50 @@ class BrowsePostsViewController: UITableViewController {
         tableView.estimatedRowHeight = 139
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
+        
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
+        
+        errorLabel = UILabel()
+        errorLabel.alpha = 0
+        errorLabel.numberOfLines = 0
+        errorLabel.textAlignment = .center
+        errorLabel.textColor = UIColor(white: 0.25, alpha: 1)
+        view.addSubview(errorLabel)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        CityHubClient.shared.posts.getPosts(categoryId: nil, language: nil, zipcode: nil) { (posts, error) in
+        CityHubClient.shared.posts.getPosts(categoryId: nil, language: nil, zipcode: nil) { posts, error in
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
+            
             guard let posts = posts else {
+                DispatchQueue.main.async {
+                    self.errorLabel.alpha = 1
+                    self.errorLabel.text = "There was an issue retrieving nearby posts. Please try again later."
+                    
+                    self.view.setNeedsLayout()
+                    self.view.layoutIfNeeded()
+                }
+                
                 return
+            }
+            
+            DispatchQueue.main.async {
+                if posts.count == 0 {
+                    self.errorLabel.alpha = 1
+                    self.errorLabel.text = "Nobody has posted in your area yet!\n\nYou can post something by tapping the new post button below."
+                } else {
+                    self.errorLabel.alpha = 0
+                }
+                
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
             }
             
             self.posts = posts
@@ -50,6 +89,16 @@ class BrowsePostsViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        activityIndicator.sizeToFit()
+        activityIndicator.frame = CGRect(x: (view.frame.size.width - activityIndicator.frame.size.width) / 2, y: (view.frame.size.height - activityIndicator.frame.size.height) / 2, width: activityIndicator.frame.size.width, height: activityIndicator.frame.size.height)
+        
+        let errorLabelFrame = errorLabel.textRect(forBounds: CGRect(x: 0, y: 0, width: view.frame.size.width - 64, height: CGFloat.greatestFiniteMagnitude), limitedToNumberOfLines: 10)
+        errorLabel.frame = CGRect(x: (view.frame.size.width - errorLabelFrame.size.width) / 2, y: (view.frame.size.height - errorLabelFrame.size.height) / 2, width: errorLabelFrame.size.width, height: errorLabelFrame.size.height)
     }
     
     // MARK: UITableViewDataSource Methods
