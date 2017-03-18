@@ -72,7 +72,31 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc private func nextButtonPressed(sender: RaisedButton?) {
-        print("forgot password hasn't been implemented yet :D")
+        SVProgressHUD.show()
+        
+        CityHubClient.shared.users.resetPassword(email: emailField.text ?? "") { error in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    SVProgressHUD.showError(withStatus: "An unknown error occurred".localized)
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    SVProgressHUD.dismiss()
+                }
+                
+                return
+            }
+            
+            DispatchQueue.main.async {
+                SVProgressHUD.showSuccess(withStatus: "Check your email to reset your password")
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                SVProgressHUD.dismiss()
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

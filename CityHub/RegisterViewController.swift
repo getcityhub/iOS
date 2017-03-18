@@ -176,6 +176,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
             
             DispatchQueue.main.async {
+                SVProgressHUD.showSuccess(withStatus: "Check your email to verify your account")
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 SVProgressHUD.dismiss()
             }
             

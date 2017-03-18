@@ -48,4 +48,14 @@ class UsersRoutes {
             completion?(user, error)
         }
     }
+    
+    func resetPassword(email: String, completion: ((_ error: CityHubRequestError?) -> Void)?) {
+        let body = [
+            "email": email
+        ] as [String: Any]
+        
+        CityHubRequest.request("/users/reset", requestType: "POST", body: body) { json, error in
+            completion?(error)
+        }
+    }
 }
