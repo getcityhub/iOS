@@ -75,3 +75,43 @@
 "Send Feedback" = "发送反馈";
 
 "Version" = "版本";
+
+"Nobody has posted in your area yet!" = "目前还没有人发布相关问题！";
+
+"You can post something by tapping the new post button below." = "你可以点击新帖子按钮发布帖子。";
+
+"There was an issue retrieving nearby posts. Please try again later." = "检索附近的帖子时出现问题。请稍后再试。";
+
+"There was an issue retrieving your local politicians. Please try again later." = "检索当地政客时出现问题。请稍后再试。";
+
+"Incorrect email address or password" = "错误的Email地址或密码";
+
+"First name is too short" = "名字太短";
+
+"First name is too long" = "名字太长";
+
+"First name can only contain letters" = "名字只能包含字母";
+
+"Last name is too short" = "姓太短";
+
+"Last name is too long" = "姓太长";
+
+"Last name can only contain letters" = "姓只能包含字母";
+
+"Zipcode is not a valid NYC zipcode" = "邮编不在纽约市";
+
+"Password is too weak" = "密码太弱";
+
+"Email address is invalid" = "Email无效";
+
+"Email address has already been registered" = "Email已被注册";
+
+"An unknown error occurred" = "出现未知错误";
+
+"Check your email to verify your account" = "检查你的Email以验证帐户";
+
+"Check your email to reset your password" = "检查你的Email以重置密码";
+
+"No posts match your query. Try searching for something else." = "没有符合条件的帖子。尝试搜索其他内容。";
+
+"There was an issue searching for posts. Please try again later." = "搜索帖子时出现问题。请稍后再试。";

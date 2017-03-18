@@ -75,3 +75,43 @@
 "Send Feedback" = "Send Feedback";
 
 "Version" = "Version";
+
+"Nobody has posted in your area yet!" = "Nobody has posted in your area yet!";
+
+"You can post something by tapping the new post button below." = "You can post something by tapping the new post button below.";
+
+"There was an issue retrieving nearby posts. Please try again later." = "There was an issue retrieving nearby posts. Please try again later.";
+
+"There was an issue retrieving your local politicians. Please try again later." = "There was an issue retrieving your local politicians. Please try again later.";
+
+"Incorrect email address or password" = "Incorrect email address or password";
+
+"First name is too short" = "First name is too short";
+
+"First name is too long" = "First name is too long";
+
+"First name can only contain letters" = "First name can only contain letters";
+
+"Last name is too short" = "Last name is too short";
+
+"Last name is too long" = "Last name is too long";
+
+"Last name can only contain letters" = "Last name can only contain letters";
+
+"Zipcode is not a valid NYC zipcode" = "Zipcode is not a valid NYC zipcode";
+
+"Password is too weak" = "Password is too weak";
+
+"Email address is invalid" = "Email address is invalid";
+
+"Email address has already been registered" = "Email address has already been registered";
+
+"An unknown error occurred" = "An unknown error occurred";
+
+"Check your email to verify your account" = "Check your email to verify your account";
+
+"Check your email to reset your password" = "Check your email to reset your password";
+
+"No posts match your query. Try searching for something else." = "No posts match your query. Try searching for something else.";
+
+"There was an issue searching for posts. Please try again later." = "There was an issue searching for posts. Please try again later.";

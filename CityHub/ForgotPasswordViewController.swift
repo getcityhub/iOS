@@ -88,7 +88,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
             }
             
             DispatchQueue.main.async {
-                SVProgressHUD.showSuccess(withStatus: "Check your email to reset your password")
+                SVProgressHUD.showSuccess(withStatus: "Check your email to reset your password".localized)
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {

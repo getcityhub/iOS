@@ -54,7 +54,7 @@ class BrowsePoliticiansViewController: UITableViewController {
             guard let politicians = politicians else {
                 DispatchQueue.main.async {
                     self.errorLabel.alpha = 1
-                    self.errorLabel.text = "There was an issue retrieving your local politicians. Please try again later."
+                    self.errorLabel.text = "There was an issue retrieving your local politicians. Please try again later.".localized
                     
                     self.view.setNeedsLayout()
                     self.view.layoutIfNeeded()
@@ -68,7 +68,7 @@ class BrowsePoliticiansViewController: UITableViewController {
             DispatchQueue.main.async {
                 if politicians.count == 0 {
                     self.errorLabel.alpha = 1
-                    self.errorLabel.text = "There was an issue retrieving your local politicians. Please try again later."
+                    self.errorLabel.text = "There was an issue retrieving your local politicians. Please try again later.".localized
                 }
                 
                 self.view.setNeedsLayout()

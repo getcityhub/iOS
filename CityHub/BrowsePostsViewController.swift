@@ -62,7 +62,7 @@ class BrowsePostsViewController: UITableViewController {
             guard let posts = posts else {
                 DispatchQueue.main.async {
                     self.errorLabel.alpha = 1
-                    self.errorLabel.text = "There was an issue retrieving nearby posts. Please try again later."
+                    self.errorLabel.text = "There was an issue retrieving nearby posts. Please try again later.".localized
                     
                     self.view.setNeedsLayout()
                     self.view.layoutIfNeeded()
@@ -76,7 +76,7 @@ class BrowsePostsViewController: UITableViewController {
             DispatchQueue.main.async {
                 if posts.count == 0 {
                     self.errorLabel.alpha = 1
-                    self.errorLabel.text = "Nobody has posted in your area yet!\n\nYou can post something by tapping the new post button below."
+                    self.errorLabel.text = "Nobody has posted in your area yet!".localized + "\n\n" + "You can post something by tapping the new post button below.".localized
                 } else {
                     self.errorLabel.alpha = 0
                 }

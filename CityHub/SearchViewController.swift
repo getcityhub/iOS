@@ -96,7 +96,7 @@ class SearchViewController: UITableViewController, SearchToolbarControllerDelega
             guard let posts = posts else {
                 DispatchQueue.main.async {
                     self.errorLabel.alpha = 1
-                    self.errorLabel.text = "There was an issue searching for posts. Please try again later."
+                    self.errorLabel.text = "There was an issue searching for posts. Please try again later.".localized
                     
                     self.view.setNeedsLayout()
                     self.view.layoutIfNeeded()
@@ -112,7 +112,7 @@ class SearchViewController: UITableViewController, SearchToolbarControllerDelega
             DispatchQueue.main.async {
                 if posts.count == 0 && text.characters.count > 0 {
                     self.errorLabel.alpha = 1
-                    self.errorLabel.text = "No posts match your query. Try searching for something else."
+                    self.errorLabel.text = "No posts match your query. Try searching for something else.".localized
                 } else {
                     self.errorLabel.alpha = 0
                 }

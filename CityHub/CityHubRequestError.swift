@@ -32,6 +32,7 @@ enum CityHubRequestError: Equatable, Error {
     func getUserMessage() -> String {
         let english: () -> String = {
             switch self {
+            case .unauthorized: return "Incorrect email address or password"
             case .shortFirstName: return "First name is too short"
             case .longFirstName: return "First name is too long"
             case .invalidFirstName: return "First name can only contain letters"

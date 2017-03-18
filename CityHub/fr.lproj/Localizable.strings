@@ -75,3 +75,43 @@
 "Send Feedback" = "Commentaires";
 
 "Version" = "Version";
+
+"Nobody has posted in your area yet!" = "Personne n'avait pas posté dans votre région déjà!";
+
+"You can post something by tapping the new post button below." = "Vous pouvez poster quelque chose en appuyant sur le bouton nouveau message en bas.";
+
+"There was an issue retrieving nearby posts. Please try again later." = "Il y avait un problème en extrayant des messages proches. Veuillez réessayer plus tard.";
+
+"There was an issue retrieving your local politicians. Please try again later." = "Il y avait un problème en extrayant vos politiciens locaux. Veuillez réessayer plus tard.";
+
+"Incorrect email address or password" = "Adresse email ou mot de passe incorrect";
+
+"First name is too short" = "Prénom est trop court";
+
+"First name is too long" = "Prénom est trop long";
+
+"First name can only contain letters" = "Prénom ne peut contenir que des lettres";
+
+"Last name is too short" = "Nom est trop court";
+
+"Last name is too long" = "Nom est trop long";
+
+"Last name can only contain letters" = "Nom ne peut contenir que des lettres";
+
+"Zipcode is not a valid NYC zipcode" = "Code postal n'est pas un code postal NYC valide";
+
+"Password is too weak" = "Mot de passe est trop faible";
+
+"Email address is invalid" = "Adresse email est invalide";
+
+"Email address has already been registered" = "Adresse email a déjà été enregistré";
+
+"An unknown error occurred" = "Une erreur inconnue est survenue";
+
+"Check your email to verify your account" = "Vérifiez votre email pour confirmer votre compte";
+
+"Check your email to reset your password" = "Vérifiez votre email pour remettre votre mot de passe";
+
+"No posts match your query. Try searching for something else." = "Aucun messages correspondent à votre requête. Essayez de rechercher pour autre chose.";
+
+"There was an issue searching for posts. Please try again later." = "Il y avait un problème en recherchant pour des messages. Veuillez reéssayer plus tard.";
