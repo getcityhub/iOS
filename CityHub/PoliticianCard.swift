@@ -65,7 +65,7 @@ class PoliticianCard: UITableViewCell {
             profileImage?.masksToBounds = true
             cardBackground.addSubview(profileImage!)
             
-            if let photoUrl = politician.photoUrl, let url = URL(string: "http://104.236.36.26/168x/\(photoUrl)") {
+            if let photoUrl = politician.photoUrl, let url = URL(string: photoUrl) {
                 let session = URLSession(configuration: URLSessionConfiguration.default)
                 
                 let task = session.dataTask(with: url) { (data, response, error) in
