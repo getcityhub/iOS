@@ -76,42 +76,42 @@
 
 "Version" = "Versión";
 
-"Nobody has posted in your area yet!" = "";
+"Nobody has posted in your area yet!" = "Nadie ha publicado en su área aún!";
 
-"You can post something by tapping the new post button below." = "";
+"You can post something by tapping the new post button below." = "Puede publicar algo por pulsando el boton de mensaje nuevo abajo";
 
-"There was an issue retrieving nearby posts. Please try again later." = "";
+"There was an issue retrieving nearby posts. Please try again later." = "Hubo un problema recuperando mensajes cercanos. Por favor intente más tarde";
 
-"There was an issue retrieving your local politicians. Please try again later." = "";
+"There was an issue retrieving your local politicians. Please try again later." = "Hubo un problema recuperando sus políticos locales. Por favor intente más tarde";
 
-"Incorrect email address or password" = "";
+"Incorrect email address or password" = "El Correo electrónico o la contraseña es incorrecto";
 
-"First name is too short" = "";
+"First name is too short" = "El nombre es demasiado corto";
 
-"First name is too long" = "";
+"First name is too long" = "El nombre es demasiado largo";
 
-"First name can only contain letters" = "";
+"First name can only contain letters" = "El nombre sólo puede contener letras";
 
-"Last name is too short" = "";
+"Last name is too short" = "El apellido es demasiado corto";
 
-"Last name is too long" = "";
+"Last name is too long" = "El apellido es demasiado largo";
 
-"Last name can only contain letters" = "";
+"Last name can only contain letters" = "El apellido sólo puede contener letras";
 
-"Zipcode is not a valid NYC zipcode" = "";
+"Zipcode is not a valid NYC zipcode" = "Este código postal no es un código postal NYC válido";
 
-"Password is too weak" = "";
+"Password is too weak" = "Este contraseña es demasiado débil";
 
-"Email address is invalid" = "";
+"Email address is invalid" = "Este correo electrónico es inválido";
 
-"Email address has already been registered" = "";
+"Email address has already been registered" = "Este correo electrónico ya ha sido registrado";
 
-"An unknown error occurred" = "";
+"An unknown error occurred" = "Un error desconocido ocurrió";
 
-"Check your email to verify your account" = "";
+"Check your email to verify your account" = "Verifica su correo electrónico para confirmar su cuenta";
 
-"Check your email to reset your password" = "";
+"Check your email to reset your password" = "Verifica su correo electrónico para confirmar su contraseña";
 
-"No posts match your query. Try searching for something else." = "";
+"No posts match your query. Try searching for something else." = "No hay mensajes coinciden con su consulta. Trate de buscar otra cosa.";
 
-"There was an issue searching for posts. Please try again later." = "";
+"There was an issue searching for posts. Please try again later." = "Hubo un problema buscando mensajes. Por favor inténtalo más tarde.";
