@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,10 +69,18 @@
                                 <action selector="likeButtonPressedWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="yLV-vh-SGu"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdF-Il-7aB">
+                            <rect key="frame" x="366" y="88" width="43" height="43"/>
+                            <state key="normal" image="Email"/>
+                            <connections>
+                                <action selector="emailButtonPressedWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="KiV-ZG-IFu"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="x43-dj-DC7" firstAttribute="bottom" secondItem="YUF-LY-60t" secondAttribute="bottom" constant="4" id="479-OC-LCb"/>
+                        <constraint firstItem="wdF-Il-7aB" firstAttribute="bottom" secondItem="Gdw-Df-yZV" secondAttribute="bottom" id="Dft-4z-Aoq"/>
                         <constraint firstItem="mzW-7o-gXY" firstAttribute="leading" secondItem="ZSV-m8-1Kx" secondAttribute="leading" constant="16" id="HCc-La-oG8"/>
                         <constraint firstItem="x43-dj-DC7" firstAttribute="leading" secondItem="YUF-LY-60t" secondAttribute="trailing" constant="12" id="Pg0-Ie-KOp"/>
                         <constraint firstAttribute="trailing" secondItem="vVZ-XE-0gE" secondAttribute="trailing" constant="16" id="Rxw-8s-BYa"/>
@@ -84,7 +92,10 @@
                         <constraint firstAttribute="bottom" secondItem="Gdw-Df-yZV" secondAttribute="bottom" constant="8" id="dUP-wd-Dir"/>
                         <constraint firstItem="vVZ-XE-0gE" firstAttribute="top" secondItem="YUF-LY-60t" secondAttribute="bottom" constant="12" id="eRK-QG-DPM"/>
                         <constraint firstItem="4hm-3H-a8s" firstAttribute="top" secondItem="ZSV-m8-1Kx" secondAttribute="top" constant="16" id="eTd-J4-6L2"/>
+                        <constraint firstItem="wdF-Il-7aB" firstAttribute="top" secondItem="Gdw-Df-yZV" secondAttribute="top" id="fIn-wx-4jo"/>
                         <constraint firstItem="vVZ-XE-0gE" firstAttribute="leading" secondItem="ZSV-m8-1Kx" secondAttribute="leading" constant="16" id="fiY-fd-f4a"/>
+                        <constraint firstItem="Gdw-Df-yZV" firstAttribute="leading" secondItem="wdF-Il-7aB" secondAttribute="trailing" id="h3F-xd-wYT"/>
+                        <constraint firstItem="wdF-Il-7aB" firstAttribute="width" secondItem="wdF-Il-7aB" secondAttribute="height" multiplier="1:1" id="hmS-97-mLc"/>
                         <constraint firstAttribute="trailing" secondItem="x43-dj-DC7" secondAttribute="trailing" constant="16" id="jBh-mE-KwL"/>
                         <constraint firstItem="Gdw-Df-yZV" firstAttribute="width" secondItem="Gdw-Df-yZV" secondAttribute="height" multiplier="1:1" id="kU5-us-jZP"/>
                         <constraint firstItem="Gdw-Df-yZV" firstAttribute="top" secondItem="vVZ-XE-0gE" secondAttribute="bottom" constant="12" id="n2O-yT-jWQ"/>
@@ -108,6 +119,7 @@
                 <outlet property="cardBackground" destination="ZSV-m8-1Kx" id="TEU-iX-gWI"/>
                 <outlet property="contentLabel" destination="vVZ-XE-0gE" id="YR4-xK-0sM"/>
                 <outlet property="dateLabel" destination="mzW-7o-gXY" id="0Hx-hC-CKl"/>
+                <outlet property="emailButton" destination="wdF-Il-7aB" id="i7S-s1-epj"/>
                 <outlet property="likeButton" destination="Gdw-Df-yZV" id="oqS-tt-0cF"/>
                 <outlet property="moreButton" destination="x43-dj-DC7" id="nm8-3V-DDR"/>
                 <outlet property="titleLabel" destination="4hm-3H-a8s" id="U1A-Bg-vBE"/>
@@ -116,6 +128,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Email" width="24" height="24"/>
         <image name="Like Border" width="24" height="24"/>
         <image name="More Vertical" width="24" height="24"/>
     </resources>

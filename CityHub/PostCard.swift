@@ -18,6 +18,7 @@ class PostCard: UITableViewCell {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     
     private var liked = false
@@ -43,6 +44,7 @@ class PostCard: UITableViewCell {
         
         if firstRun {
             moreButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
+            emailButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
             likeButton.tintColor = UIColor(red: 96/255, green: 125/255, blue: 139/255, alpha: 1)
         }
         
@@ -83,6 +85,13 @@ class PostCard: UITableViewCell {
         controller.addAction(cancelAction)
         
         viewController?.present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func emailButtonPressed(sender: UIButton) {
+        let dvc = DraftViewController()
+        let dtvc = DraftToolbarController(rootViewController: dvc)
+        
+        viewController?.present(dtvc, animated: true, completion: nil)
     }
     
     @IBAction func likeButtonPressed(sender: UIButton) {
