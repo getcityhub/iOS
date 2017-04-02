@@ -17,6 +17,8 @@
 		75997B741E63597800B3EF45 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */; };
 		759FC0831E914EB500075F85 /* DraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FC0821E914EB500075F85 /* DraftViewController.swift */; };
 		759FC0851E914FCA00075F85 /* DraftToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FC0841E914FCA00075F85 /* DraftToolbarController.swift */; };
+		759FC0871E915F5D00075F85 /* PoliticianAutofillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FC0861E915F5D00075F85 /* PoliticianAutofillView.swift */; };
+		759FC0891E915F6900075F85 /* PoliticianCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FC0881E915F6900075F85 /* PoliticianCell.swift */; };
 		75A5BF891E75DD5000FD4D3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5BF881E75DD5000FD4D3F /* Constants.swift */; };
 		75BFF9E11E584CE7005FB84E /* Politician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E01E584CE7005FB84E /* Politician.swift */; };
 		75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */; };
@@ -67,6 +69,8 @@
 		75997B731E63597800B3EF45 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		759FC0821E914EB500075F85 /* DraftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftViewController.swift; sourceTree = "<group>"; };
 		759FC0841E914FCA00075F85 /* DraftToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftToolbarController.swift; sourceTree = "<group>"; };
+		759FC0861E915F5D00075F85 /* PoliticianAutofillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianAutofillView.swift; sourceTree = "<group>"; };
+		759FC0881E915F6900075F85 /* PoliticianCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticianCell.swift; sourceTree = "<group>"; };
 		75A5BF881E75DD5000FD4D3F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75BFF9E01E584CE7005FB84E /* Politician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Politician.swift; sourceTree = "<group>"; };
 		75BFF9E21E5850C8005FB84E /* UsersRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRoutes.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				7577BB2B1E6BA7F100455BF3 /* SettingsCell.swift */,
 				75EE63F21E6B993800A95EC9 /* SettingsHeaderView.swift */,
 				75EE63F41E6B9AC100A95EC9 /* SettingsTextCell.swift */,
+				759FC0861E915F5D00075F85 /* PoliticianAutofillView.swift */,
+				759FC0881E915F6900075F85 /* PoliticianCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 				EB1419BD1E50E28D0081FAFD /* PostsRoutes.swift in Sources */,
 				752385C01E621FD90070AF9C /* Language.swift in Sources */,
 				EB73A2611E47B3E80079CA13 /* PoliticianCard.swift in Sources */,
+				759FC0891E915F6900075F85 /* PoliticianCell.swift in Sources */,
 				75BFF9E31E5850C8005FB84E /* UsersRoutes.swift in Sources */,
 				EB6A28D41E42AD820035AA8E /* CityHubToolbarController.swift in Sources */,
 				EBCF2D591E465C9900DCB577 /* SelectTopicViewController.swift in Sources */,
@@ -444,6 +451,7 @@
 				EBDE7BF41E43A4E5007057C8 /* UIView+ViewController.swift in Sources */,
 				EB1419B81E50CC650081FAFD /* CategoriesRoutes.swift in Sources */,
 				EB8E665E1E457E160069C8EC /* CityHubMenuController.swift in Sources */,
+				759FC0871E915F5D00075F85 /* PoliticianAutofillView.swift in Sources */,
 				EBCF2D5B1E465D9B00DCB577 /* CollapsibleTopicHeader.swift in Sources */,
 				EB8E665C1E4576090069C8EC /* User.swift in Sources */,
 				EB1419D51E50FF080081FAFD /* String+Localized.swift in Sources */,
